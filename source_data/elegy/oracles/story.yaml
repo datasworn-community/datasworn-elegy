@@ -1,0 +1,314 @@
+_id: elegy
+datasworn_version: "0.1.0"
+type: ruleset
+oracles:
+  story:
+    name: Story Oracles
+    type: oracle_collection
+    oracle_type: tables
+    _source:
+      <<: &Source
+          title: 'Elegy 3.5'
+          license: https://creativecommons.org/licenses/by-nc-sa/4.0
+          url: https://miraclem.itch.io/elegy
+          date: 2024-07-31
+          authors:
+            - name: moro de oliveira
+    contents:
+      clues:
+          name: Clues
+          type: oracle_rollable
+          oracle_type: table_text
+          canonical_name: 'Clues Table'
+          summary: Use this oracle to determine story clues.
+          dice: 1d100
+          _source:
+            <<: *Source
+          rows:
+            - roll: { min: 1, max: 2 }
+              text: Affirms a previously understood fact or clue
+            - roll: { min: 3, max: 4 }
+              text: Connects to a known rumor or scandal
+            - roll: { min: 5, max: 6 }
+              text: Connects to a previously unrelated mystery or mission
+            - roll: { min: 7, max: 8 }
+              text: Connects to your own expertise or interests
+            - roll: { min: 9, max: 10 }
+              text: Contradicts a previously understood fact or clue
+            - roll: { min: 11, max: 12 }
+              text: Evokes a personal memory
+            - roll: { min: 13, max: 14 }
+              text: Evokes a remarkable supernatural phenomenon
+            - roll: { min: 15, max: 16 }
+              text: Evokes a vision or prophecy
+            - roll: { min: 17, max: 18 }
+              text: Involves a cultural touchstone
+            - roll: { min: 19, max: 20 }
+              text: Involves a hidden or mysterious faction
+            - roll: { min: 21, max: 22 }
+              text: Involves a hidden or mysterious vampire
+            - roll: { min: 23, max: 24 }
+              text: Involves a key or means of access
+            - roll: { min: 25, max: 26 }
+              text: Involves a hidden or mysterious mortal
+            - roll: { min: 27, max: 28 }
+              text: Involves a supernatural being
+            - roll: { min: 29, max: 30 }
+              text: Involves a notable faction
+            - roll: { min: 31, max: 32 }
+              text: Involves a notable vampire
+            - roll: { min: 33, max: 34 }
+              text: Involves a person or faction from your background
+            - roll: { min: 35, max: 36 }
+              text: Involves a personal item
+            - roll: { min: 37, max: 38 }
+              text: Involves an enemy or rival
+            - roll: { min: 39, max: 40 }
+              text: Involves a notable mortal
+            - roll: { min: 41, max: 42 }
+              text: Involves an unusual ability or power
+            - roll: { min: 43, max: 44 }
+              text: Involves someone you trust
+            - roll: { min: 45, max: 46 }
+              text: Involves something rare, expensive, or precious
+            - roll: { min: 47, max: 48 }
+              text: Leads to a strange or unfamiliar place
+            - roll: { min: 49, max: 50 }
+              text: Leads to a hidden or forgotten place
+            - roll: { min: 51, max: 52 }
+              text: Leads to a nearby or familiar place
+            - roll: { min: 53, max: 54 }
+              text: Leads to a notable or central place
+            - roll: { min: 55, max: 56 }
+              text: Suggests a history of similar incidents
+            - roll: { min: 57, max: 58 }
+              text: Suggests a looming event or deadline
+            - roll: { min: 59, max: 60 }
+              text: Suggests an imposter or forgery
+            - roll: { min: 61, max: 62 }
+              text: Involves a supernatural being
+            - roll: { min: 63, max: 64 }
+              text: Evokes a remarkable supernatural phenomenon
+            - roll: { min: 65, max: 66 }
+              text: Involves a notable faction
+            - roll: { min: 67, max: 68 }
+              text: Connects to a known rumor or scandal
+            - roll: { min: 69, max: 70 }
+              text: Involves a hidden or mysterious faction
+            - roll: { min: 71, max: 72 }
+              text: Connects to a previously unrelated mystery or mission
+            - roll: { min: 73, max: 74 }
+              text: Evokes a vision or prophecy
+            - roll: { min: 75, max: 76 }
+              text: Affirms a previously understood fact or clue
+            - roll: { min: 77, max: 78 }
+              text: Leads to a nearby or familiar place
+            - roll: { min: 79, max: 80 }
+              text: Involves a hidden or mysterious mortal
+            - roll: { min: 81, max: 82 }
+              text: Connects to your own expertise or interests
+            - roll: { min: 83, max: 84 }
+              text: Involves a notable vampire
+            - roll: { min: 85, max: 86 }
+              text: Contradicts a previously understood fact or clue
+            - roll: { min: 87, max: 88 }
+              text: Involves a key or means of access
+            - roll: { min: 89, max: 90 }
+              text: Evokes a personal memory
+            - roll: { min: 91, max: 92 }
+              text: Leads to a hidden or forgotten place
+            - roll: { min: 93, max: 94 }
+              text: Suggests a history of similar incidents
+            - roll: { min: 95, max: 96 }
+              text: Suggests a looming event or deadline
+            - roll: { min: 97, max: 98 }
+              text: Involves someone you trust
+            - roll: { min: 99, max: 100 }
+              text: Involves a cultural touchstone
+
+      complications:
+          name: Complications
+          type: oracle_rollable
+          oracle_type: table_text
+          canonical_name: 'Complication Table'
+          summary: Use this oracle to determine story complications.
+          dice: 1d100
+          _source:
+            <<: *Source
+          rows:
+            - roll: { min: 1, max: 3 }
+              text: Supernatural power fails
+            - roll: { min: 4, max: 6 }
+              text: Supernatural power misfires
+            - roll: { min: 7, max: 9 }
+              text: Debt or promise comes due
+            - roll: { min: 10, max: 12 }
+              text: Enemy reveals unexpected powers, abilities, or influence
+            - roll: { min: 13, max: 15 }
+              text: Enemy reveals their true agenda or nature
+            - roll: { min: 16, max: 18 }
+              text: Enemy unexpectedly benefits from your actions
+            - roll: { min: 19, max: 21 }
+              text: Key location is made inaccessible
+            - roll: { min: 22, max: 24 }
+              text: Key location is threatened or made unsafe
+            - roll: { min: 25, max: 27 }
+              text: A mortal notices you're not human
+            - roll: { min: 28, max: 30 }
+              text: You lose control and feed on the closest mortal
+            - roll: { min: 31, max: 33 }
+              text: Objective of a quest is not what you assumed
+            - roll: { min: 34, max: 36 }
+              text: Old enemy resurfaces
+            - roll: { min: 37, max: 39 }
+              text: Simultaneous problems force a hard choice
+            - roll: { min: 40, max: 42 }
+              text: Someone important betrays your trust
+            - roll: { min: 43, max: 45 }
+              text: Someone important is threatened or endangered
+            - roll: { min: 46, max: 48 }
+              text: Someone important reveals their problematic secret or history
+            - roll: { min: 49, max: 51 }
+              text: Something important goes missing
+            - roll: { min: 52, max: 54 }
+              text: A supernatural power is shown to have unexpected consequences
+            - roll: { min: 55, max: 57 }
+              text: Time pressure suddenly increases
+            - roll: { min: 58, max: 60 }
+              text: Trap is sprung
+            - roll: { min: 61, max: 63 }
+              text: True agenda of a connection is revealed
+            - roll: { min: 64, max: 66 }
+              text: Trusted information is shown to be false
+            - roll: { min: 67, max: 69 }
+              text: Two seemingly unrelated problems are shown to be connected
+            - roll: { min: 70, max: 72 }
+              text: Undermined by self-doubt or vulnerabilities
+            - roll: { min: 73, max: 75 }
+              text: Unexpected enemies appear
+            - roll: { min: 76, max: 78 }
+              text: Urgent message distracts you from your mission
+            - roll: { min: 79, max: 81 }
+              text: You are tracked or followed
+            - roll: { min: 82, max: 84 }
+              text: You were diverted from the true crisis
+            - roll: { min: 85, max: 87 }
+              text: An unexpected ally appears
+            - roll: { min: 88, max: 90 }
+              text: A hidden treasure or artifact is discovered
+            - roll: { min: 91, max: 93 }
+              text: A long-lost relative or friend resurfaces
+            - roll: { min: 94, max: 96 }
+              text: A powerful artifact or weapon is revealed
+            - roll: { min: 97, max: 100 }
+              text: Roll twice
+      city_events:
+          name: City events
+          type: oracle_rollable
+          oracle_type: table_text
+          canonical_name: 'City events Table'
+          summary: Use this oracle to determine events in the city.
+          dice: 1d100
+          _source:
+            <<: *Source
+          rows:
+            - roll: { min: 1, max: 2 }
+              text: Influential vampire disappears mysteriously
+            - roll: { min: 3, max: 4 }
+              text: Mortal witnesses a vampire feeding
+            - roll: { min: 5, max: 6 }
+              text: Grisly murders point to vampires
+            - roll: { min: 7, max: 8 }
+              text: Relic is stolen from secure place
+            - roll: { min: 9, max: 10 }
+              text: Influential vampire assassinated at formal gathering
+            - roll: { min: 11, max: 12 }
+              text: Outbreak of blood-borne illness
+            - roll: { min: 13, max: 14 }
+              text: Faction stronghold raided by enemies
+            - roll: { min: 15, max: 16 }
+              text: Betrayal fractures faction alliances
+            - roll: { min: 17, max: 18 }
+              text: Vampire mannequin is threatened
+            - roll: { min: 19, max: 20 }
+              text: Ancient vampire wakes from slumber
+            - roll: { min: 21, max: 22 }
+              text: Corrupt council manipulates vampire society
+            - roll: { min: 23, max: 24 }
+              text: Mortal cult threatens to expose vampires
+            - roll: { min: 25, max: 26 }
+              text: Faction tensions escalate into conflict
+            - roll: { min: 27, max: 28 }
+              text: Mysterious murders target vampire elite
+            - roll: { min: 29, max: 30 }
+              text: Someone in the faction ranks is a spy
+            - roll: { min: 31, max: 32 }
+              text: Sacred burial ground desecrated by enemies
+            - roll: { min: 33, max: 34 }
+              text: Ancient manuscripts hidden in the city hold forbidden knowledge
+            - roll: { min: 35, max: 36 }
+              text: Werewolves overrun vampire territory
+            - roll: { min: 37, max: 38 }
+              text: Betrayal by spy jeopardizes faction
+            - roll: { min: 39, max: 40 }
+              text: Factions clash over limited feeding grounds
+            - roll: { min: 41, max: 42 }
+              text: Faction leader plots assassination against rivals
+            - roll: { min: 43, max: 44 }
+              text: A vampire hunter organization infiltrates the city
+            - roll: { min: 45, max: 46 }
+              text: Façade is breached at influential mortal gathering
+            - roll: { min: 47, max: 48 }
+              text: A powerful psychic threatens to expose vampire secrets
+            - roll: { min: 49, max: 50 }
+              text: Influential vampire challenges queen’s rule
+            - roll: { min: 51, max: 52 }
+              text: A vampire’s progeny rebels, gathering their own faction
+            - roll: { min: 53, max: 54 }
+              text: A faction leader is framed for a heinous crime
+            - roll: { min: 55, max: 56 }
+              text: A rival faction joins forces with werewolf adversaries
+            - roll: { min: 57, max: 58 }
+              text: A vampire hunter reveals the existence of vampire society
+            - roll: { min: 59, max: 60 }
+              text: A rogue vampire initiates a citywide reign of terror
+            - roll: { min: 61, max: 62 }
+              text: A vampire’s mortal ally is possessed by an ancient spirit
+            - roll: { min: 63, max: 64 }
+              text: A vampire conspiracy seeks to control mortal governments
+            - roll: { min: 65, max: 66 }
+              text: A vampire’s mortal family is targeted by a vengeful adversary
+            - roll: { min: 67, max: 68 }
+              text: A faction leader betrays their allies, forging new alliances
+            - roll: { min: 69, max: 70 }
+              text: A vampire is wrongly accused of breaking the sacred traditions
+            - roll: { min: 71, max: 72 }
+              text: A supernatural entity demands the sacrifice of an innocent mortal
+            - roll: { min: 73, max: 74 }
+              text: A vampire hunter organization unleashes a deadly ambush on a gathering
+            - roll: { min: 75, max: 76 }
+              text: A vampire’s trusted advisor betrays them, leading to a personal vendetta
+            - roll: { min: 77, max: 78 }
+              text: A mortal uprising led by a charismatic leader threatens to expose the vampire community
+            - roll: { min: 79, max: 80 }
+              text: A powerful psychic with the ability to nullify vampire powers emerges as a threat
+            - roll: { min: 81, max: 82 }
+              text: A rogue vampire initiates a series of terrorist attacks, plunging the city into chaos
+            - roll: { min: 83, max: 84 }
+              text: A powerful vampire elder seeks to rewrite the vampire traditions to suit their desires
+            - roll: { min: 85, max: 86 }
+              text: A prominent local politician is found dead with obvious signs of feeding
+            - roll: { min: 87, max: 88 }
+              text: A mysterious cult emerges, preaching the existence of supernatural beings in the city
+            - roll: { min: 89, max: 90 }
+              text: A secret society of mortal vampire enthusiasts discovers the existence of real vampires and seeks to become their allies
+            - roll: { min: 91, max: 92 }
+              text: A group of vampire hunters develops a serum that grants temporary vampire-like abilities
+            - roll: { min: 93, max: 94 }
+              text: The city's major library is revealed to house ancient vampire texts
+            - roll: { min: 95, max: 96 }
+              text: A vampire's lair is discovered by a group of mortals
+            - roll: { min: 97, max: 98 }
+              text: The city's major park becomes the site of a vampire ritual
+            - roll: { min: 99, max: 100 }
+              text: A vampire's lair is compromised by a mole within their own faction, leading to a citywide hunt for the traitor

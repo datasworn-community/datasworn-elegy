@@ -1,0 +1,241 @@
+_id: elegy
+datasworn_version: "0.1.0"
+type: ruleset
+oracles:
+  ambiance:
+    name: Ambiance Oracles
+    type: oracle_collection
+    oracle_type: tables
+    _source:
+      <<: &Source
+          title: 'Elegy 3.5'
+          license: https://creativecommons.org/licenses/by-nc-sa/4.0
+          url: https://miraclem.itch.io/elegy
+          date: 2024-07-31
+          authors:
+            - name: moro de oliveira
+    contents:
+      streets:
+          name: Streets
+          type: oracle_rollable
+          oracle_type: table_text
+          canonical_name: 'Street ambiances Table'
+          summary: Use this oracle to determine ambiance in the street theme.
+          dice: 1d100
+          _source:
+            <<: *Source
+          rows:
+            - roll: { min: 1, max: 2 }
+              text: Distant sirens wail through the night
+            - roll: { min: 3, max: 4 }
+              text: Flickering streetlights create shifting shadows
+            - roll: { min: 5, max: 6 }
+              text: Rain-soaked streets reflect dim lamplights
+            - roll: { min: 7, max: 8 }
+              text: Lurking figures linger in concealed corners
+            - roll: { min: 9, max: 10 }
+              text: Empty alleyways echo with whispered secrets
+            - roll: { min: 11, max: 12 }
+              text: Gritty graffiti adorns decaying brick walls
+            - roll: { min: 13, max: 14 }
+              text: Thick fog slithers through narrow passages
+            - roll: { min: 15, max: 16 }
+              text: Damp air carries a bone-chilling coldness
+            - roll: { min: 17, max: 18 }
+              text: Pounding footsteps reverberate in empty alleys
+            - roll: { min: 19, max: 20 }
+              text: Abandoned cars sit motionless along the road
+            - roll: { min: 21, max: 22 }
+              text: Hushed conversations drift from hidden doorways
+            - roll: { min: 23, max: 24 }
+              text: Broken glass crunches under weary footsteps
+            - roll: { min: 25, max: 26 }
+              text: Sudden gusts of wind howl between buildings
+            - roll: { min: 27, max: 28 }
+              text: Flickering neon signs cast an eerie glow
+            - roll: { min: 29, max: 30 }
+              text: Shattered streetlights leave patches of darkness
+            - roll: { min: 31, max: 32 }
+              text: Shadows dance in the dimly lit park
+            - roll: { min: 33, max: 34 }
+              text: Fading laughter echoes in forgotten playgrounds
+            - roll: { min: 35, max: 36 }
+              text: Overflowing dumpsters emanate putrid odors
+            - roll: { min: 37, max: 38 }
+              text: Forgotten newspapers tumble along deserted streets
+            - roll: { min: 39, max: 40 }
+              text: Rats scurry through garbage-filled alleyways
+            - roll: { min: 41, max: 42 }
+              text: Dilapidated buildings creak with unseen movement
+            - roll: { min: 43, max: 44 }
+              text: Low rumbling of passing subway trains
+            - roll: { min: 45, max: 46 }
+              text: Stray cats dart between crumbling structures
+            - roll: { min: 47, max: 48 }
+              text: Distant hum of electrical transformers fills the air
+            - roll: { min: 49, max: 50 }
+              text: Broken fire escapes cling to aging facades
+            - roll: { min: 51, max: 52 }
+              text: Sudden flashes of distant lightning illuminate silhouettes
+            - roll: { min: 53, max: 54 }
+              text: Graffiti-covered stairwells lead to hidden depths
+            - roll: { min: 55, max: 56 }
+              text: Muffled music seeps through closed basement doors
+            - roll: { min: 57, max: 58 }
+              text: Faint laughter drifts from concealed speakeasies
+            - roll: { min: 59, max: 60 }
+              text: Rusty bicycles lean against rusty chain-link fences
+            - roll: { min: 61, max: 62 }
+              text: Looming skyscrapers cast long, dark shadows
+            - roll: { min: 63, max: 64 }
+              text: Discarded needles litter the dimly lit alleys
+            - roll: { min: 65, max: 66 }
+              text: Flickering lamplights reveal broken cobblestone paths
+            - roll: { min: 67, max: 68 }
+              text: Shadows twist and elongate along deserted sidewalks
+            - roll: { min: 69, max: 70 }
+              text: Stray gusts of wind rattle loose shutters
+            - roll: { min: 71, max: 72 }
+              text: Moonlight filters through gaps in boarded windows
+            - roll: { min: 73, max: 74 }
+              text: Lingering cigarette smoke hangs in the stagnant air
+            - roll: { min: 75, max: 76 }
+              text: Eerie silence descends as footsteps fade
+            - roll: { min: 77, max: 78 }
+              text: Vagrants huddle around a flickering barrel fire
+            - roll: { min: 79, max: 80 }
+              text: Tattered curtains sway in forgotten apartment windows
+            - roll: { min: 81, max: 82 }
+              text: Broken fire hydrants ooze water onto cracked pavement
+            - roll: { min: 83, max: 84 }
+              text: Puddles reflect the moon’s pale, haunting light
+            - roll: { min: 85, max: 86 }
+              text: Chipped statues stand as forgotten sentinels
+            - roll: { min: 87, max: 88 }
+              text: The distant hum of a malfunctioning air conditioner
+            - roll: { min: 89, max: 90 }
+              text: Crumbling stone steps lead to subterranean depths
+            - roll: { min: 91, max: 92 }
+              text: Vines crawl up decaying brick facades
+            - roll: { min: 93, max: 94 }
+              text: Faint sirens grow distant as they fade
+            - roll: { min: 95, max: 96 }
+              text: Wandering shadows elongate under dim streetlights
+            - roll: { min: 97, max: 98 }
+              text: Broken-down cars rust in desolate parking lots
+            - roll: { min: 99, max: 100 }
+              text: Unmarked doorways conceal hidden nocturnal activities
+
+      indoors:
+        name: Indoors
+        type: oracle_rollable
+        oracle_type: table_text
+        canonical_name: 'Indoor ambiances Table'
+        summary: Use this oracle to determine ambiance in the indoor theme.
+        dice: 1d100
+        _source:
+          <<: *Source
+        rows:    
+          - roll: { min: 1, max: 2 }
+            text: Flickering fluorescent lights hum softly
+          - roll: { min: 3, max: 4 }
+            text: Distant echoes reverberate through empty hallways
+          - roll: { min: 5, max: 6 }
+            text: Dust dances in the beam of a single spotlight
+          - roll: { min: 7, max: 8 }
+            text: The scent of dampness permeates the air
+          - roll: { min: 9, max: 10 }
+            text: Creaking floorboards echo with every step
+          - roll: { min: 11, max: 12 }
+            text: Fading wallpaper peels from decaying walls
+          - roll: { min: 13, max: 14 }
+            text: Flickering candle casts eerie shadows on the walls
+          - roll: { min: 15, max: 16 }
+            text: The soft crackling of a dying fireplace
+          - roll: { min: 17, max: 18 }
+            text: Stale air hangs heavy in abandoned rooms
+          - roll: { min: 19, max: 20 }
+            text: Dimly lit corridors lead to mysterious chambers
+          - roll: { min: 21, max: 22 }
+            text: Dripping water echoes in hidden basement depths
+          - roll: { min: 23, max: 24 }
+            text: Tattered curtains sway in a cold breeze
+          - roll: { min: 25, max: 26 }
+            text: Rustling papers hint at forgotten secrets
+          - roll: { min: 27, max: 28 }
+            text: The soft hiss of steam pipes fills the silence
+          - roll: { min: 29, max: 30 }
+            text: Faint whispers drift through the empty library
+          - roll: { min: 31, max: 32 }
+            text: Shattered mirrors reflect fragmented memories
+          - roll: { min: 33, max: 34 }
+            text: The muffled hum of malfunctioning electronics
+          - roll: { min: 35, max: 36 }
+            text: Old photographs lie scattered on dusty tabletops
+          - roll: { min: 37, max: 38 }
+            text: Faint scratching sounds behind locked doors
+          - roll: { min: 39, max: 40 }
+            text: A distant clock chimes, marking the passing time
+          - roll: { min: 41, max: 42 }
+            text: A flickering television broadcasts static-filled images
+          - roll: { min: 43, max: 44 }
+            text: The gentle patter of rain against cracked windows
+          - roll: { min: 45, max: 46 }
+            text: The faint scent of old books lingers in the air
+          - roll: { min: 47, max: 48 }
+            text: Hushed footsteps echo in grand, empty ballrooms
+          - roll: { min: 49, max: 50 }
+            text: Shuffling sound of unseen creatures scurrying
+          - roll: { min: 51, max: 52 }
+            text: The eerie glow of an abandoned operating theater
+          - roll: { min: 53, max: 54 }
+            text: Heavy curtains sway with a chilling draft
+          - roll: { min: 55, max: 56 }
+            text: Faint laughter from long-forgotten celebrations
+          - roll: { min: 57, max: 58 }
+            text: Broken glass crunches under cautious footsteps
+          - roll: { min: 59, max: 60 }
+            text: The distant sound of a music box melody
+          - roll: { min: 61, max: 62 }
+            text: The flickering glow of candlelit séances
+          - roll: { min: 63, max: 64 }
+            text: Dust-covered pianos hold forgotten melodies
+          - roll: { min: 65, max: 66 }
+            text: Clattering keys on old typewriters resonate
+          - roll: { min: 67, max: 68 }
+            text: The gentle rustling of moth-eaten curtains
+          - roll: { min: 69, max: 70 }
+            text: Lingering scent of perfume in abandoned bedrooms
+          - roll: { min: 71, max: 72 }
+            text: Crumbling plaster falls in whispered cascades
+          - roll: { min: 73, max: 74 }
+            text: Shifting shadows dance on cracked wallpaper
+          - roll: { min: 75, max: 76 }
+            text: A distant echo of a child’s laughter
+          - roll: { min: 77, max: 78 }
+            text: The subtle rustle of tattered theater curtains
+          - roll: { min: 79, max: 80 }
+            text: Broken record player spins in eternal repetition
+          - roll: { min: 81, max: 82 }
+            text: The hollow echo of footsteps in empty corridors
+          - roll: { min: 83, max: 84 }
+            text: Flickering computer screens cast eerie glows
+          - roll: { min: 85, max: 86 }
+            text: The distant hum of malfunctioning vending machines
+          - roll: { min: 87, max: 88 }
+            text: The hushed whispers of forgotten conversations
+          - roll: { min: 89, max: 90 }
+            text: Shattered porcelain dolls stare with glassy eyes
+          - roll: { min: 91, max: 92 }
+            text: Faint cries of pain from hidden torture chambers
+          - roll: { min: 93, max: 94 }
+            text: Layers of dust cover forgotten antique furniture
+          - roll: { min: 95, max: 96 }
+            text: The soft squeak of a rocking chair’s motion
+          - roll: { min: 97, max: 98 }
+            text: Ticking clocks mark the passage of time
+          - roll: { min: 99, max: 100 }
+            text: An old radio plays haunting melodies from another era
+
+
+

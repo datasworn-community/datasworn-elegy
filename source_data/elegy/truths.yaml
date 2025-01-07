@@ -1,0 +1,337 @@
+_id: elegy
+type: ruleset
+datasworn_version: "0.1.0"
+truths:
+  history:
+    name: History
+    type: truth
+    _source:
+      <<: &Source
+        title: 'Elegy 3.5 truths'
+        license: https://creativecommons.org/licenses/by-nc-sa/4.0
+        url: https://miraclem.itch.io/elegy
+        date: 2024-07-31
+        authors:
+          - name: moro de oliveira
+      page: 2
+    options:
+      - roll: { min: 1, max: 33 }
+        summary: In the dark ages
+        description: |-
+          Santa Maria was a crucial trading post situated at the crossroads of major medieval trade routes. It soon became a hub for commerce and cultural exchange, full of prosperity.
+        quest_starter: |-
+          Rumors are circulating about an ancient artifact that once belonged to a powerful vampire in the Middle Ages, believed to be hidden somewhere in Santa Maria. Retrieving this artifact could earn you the respect of your elders. What is this artifact? What’s its origin? Where is it said to be? What guards it?
+      - roll: { min: 34, max: 67 }
+        summary: Somewhere between the 16th and the 19th century.
+        description: |-
+          Fueled by the advancements of the Industrial Revolution, Santa Maria became known for its factories and innovations in manufacturing. The city was pivotal in shaping the era’s economic landscape, drawing a growing population seeking employment.
+        quest_starter: |-
+          Legend says a gun that belonged to an old ruler in Santa Maria is being kept in a museum. This gun was used to kill many vampires a few centuries ago, and it would make a great trophy. Who convinces you to steal it?
+      - roll: { min: 68, max: 100 }
+        summary: At the beginning of the 20th century.
+        description: |-
+          Santa Maria embodied the dynamism of a new era. Positioned as a cultural melting pot, it became a hub for cultural movements, scientific breakthroughs, and the pursuit of new ideas.
+        quest_starter: |-
+          It is said that a building designed by a vampire architect at the turn of the century contains hidden chambers that hold some kind of treasure. What does this building serve as? Why do you agree to invade and investigate it?
+  origins:
+    name: Origins
+    type: truth
+    _source:
+      <<: *Source
+      page: 3
+    options:
+      - roll: { min: 1, max: 33 }
+        summary: Vampirism is a genetic mutation.
+        description: |-
+          Vampires are their own species, integral to the balance of the world’s ecosystem, albeit in a supernatural way.
+        quest_starter: |-
+          A renowned biologist is conducting an experiment on vampire blood, threatening the Façade. How do you get involved in this situation? How do you plan to silence her?
+      - roll: { min: 34, max: 67 }
+        summary: Vampirism is a punishment for humanity’s original sins.
+        description: |-
+          The curse unfolded when the first murder occurred, and a higher power condemned the killer and her descendants to an eternal nocturnal existence.
+        quest_starter: |-
+          A cryptic parchment telling the story of the first murder has been found. It’s in a strange language, and it seems to reveal new details of the story. How will you translate it? What details are these?
+      - roll: { min: 68, max: 100 }
+        summary: Vampirism is an eternal enigma.
+        description: |-
+          Even the most enlightened vampires harbor conflicting opinions on this matter, and there is no definitive answer.
+        quest_starter: |-
+          Vampires form a cult around the idea that it’s possible to turn back into mere humans, but mortal authorities suspect something is not right with them. Why do you step in this situation?
+  superstitions:
+    name: Superstitions
+    type: truth
+    _source:
+      <<: *Source
+      page: 4
+    options:
+      - roll: { min: 1, max: 33 }
+        summary: Most superstitions about vampires are untrue.
+        description: |-
+          They are not deterred by crucifixes, garlic, or holy water, and they can enter private domains without invitation. A stake through the heart merely paralyzes them.
+        quest_starter: |-
+          A suspicious mortal is guarding a place with garlic and crosses. While she is clearly superstitious, she seems to be holding something of importance within said place. What gives it away? How do you get involved in discovering what it is?
+      - roll: { min: 34, max: 67 }
+        summary: Superstitions about vampires reflect the truth.
+        description: |-
+          Garlic, holy water, crucifixes, and other religious symbols are actually harmful. A stake to the heart will kill them, and they cannot enter uninvited.
+        quest_starter: |-
+          Garlic gas was released in the ventilation system of your progenitor. Who is the culprit? Why does she want to harm your progenitor?
+      - roll: { min: 68, max: 100 }
+        summary: Religious symbols are dangerous in the hands of faithful people.
+        description: |-
+          Authentic Faith is a supernatural force rooted in sincere belief. Mortals with Authentic Faith can wield divine symbols to harm vampires.
+        quest_starter: |-
+          A visiting bishop in Santa Maria plans to bless the water in a large fountain, transforming it into a potent weapon against your kind. How will you stop her? What symbol does she carry?
+  genealogy:
+    name: Genealogy
+    type: truth
+    _source:
+      <<: *Source
+      page: 5
+    options:
+      - roll: { min: 1, max: 33 }
+        summary: Vampires share a single progenitor.
+        description: |-
+          All vampires trace their lineage back to a single source, creating a complex web of relationships and responsibilities.
+        quest_starter: |-
+          A lost lineage chart has resurfaced, revealing the connections between several powerful vampires. Who has it, and why is it causing turmoil?
+      - roll: { min: 34, max: 67 }
+        summary: Vampires are divided into distinct clans or families.
+        description: |-
+          Each clan has its own unique characteristics, powers, and traditions, often leading to rivalries.
+        quest_starter: |-
+          A clan leader has gone missing, throwing their followers into disarray. What role do you play in this power vacuum?
+      - roll: { min: 68, max: 100 }
+        summary: Vampires are solitary by nature.
+        description: |-
+          Most vampires avoid forming large communities, preferring independence and secrecy, but some exceptions exist.
+        quest_starter: |-
+          An enigmatic vampire is attempting to unite solitary vampires under a single banner. Why does this concern you?
+  what_mortals_know:
+    name: What Mortals Know
+    type: truth
+    _source:
+      <<: *Source
+      page: 6
+    options:
+      - roll: { min: 1, max: 33 }
+        summary: Mortals remain blissfully ignorant of vampires.
+        description: |-
+          Few mortals are aware of the existence of vampires, as the Façade remains strong and well-guarded.
+        quest_starter: |-
+          A mortal investigator has come dangerously close to uncovering the truth. How do you handle them?
+      - roll: { min: 34, max: 67 }
+        summary: Some mortals suspect the truth.
+        description: |-
+          Myths, rumors, and conspiracies about vampires persist, and some mortals actively seek to prove their existence.
+        quest_starter: |-
+          A secret society dedicated to hunting vampires is operating in Santa Maria. How do you deal with them?
+      - roll: { min: 68, max: 100 }
+        summary: Mortals are aware of vampires.
+        description: |-
+          Vampires are an open secret, and society has adapted to coexist with them—albeit uneasily.
+        quest_starter: |-
+          A mortal lawmaker proposes harsh restrictions on vampire activities. How do you influence this process?
+
+  the_internet:
+    name: The Internet
+    type: truth
+    _source:
+      <<: *Source
+      page: 7
+    options:
+      - roll: { min: 1, max: 33 }
+        summary: The internet is a useful tool for vampires.
+        description: |-
+          Vampires use the internet to communicate, gather information, and maintain the Façade with relative ease.
+        quest_starter: |-
+          A hacker has discovered a vampire-only online forum and threatens to expose it. What steps do you take?
+      - roll: { min: 34, max: 67 }
+        summary: The internet poses significant risks.
+        description: |-
+          The transparency of the digital age has made it harder for vampires to remain hidden, leading to frequent breaches of the Façade.
+        quest_starter: |-
+          A viral video appears to capture undeniable evidence of vampiric activity. How do you address the fallout?
+      - roll: { min: 68, max: 100 }
+        summary: Vampires avoid the internet.
+        description: |-
+          Fearing exposure and surveillance, most vampires steer clear of the digital world, relying on older methods of communication.
+        quest_starter: |-
+          A mortal journalist questions why you are absent from online records. How do you explain this?
+  rebels:
+    name: Rebels
+    type: truth
+    _source:
+      <<: *Source
+      page: 8
+    options:
+      - roll: { min: 1, max: 33 }
+        summary: Rebels seek to overthrow vampire society.
+        description: |-
+          Dissatisfied with the current order, these vampires aim to dismantle traditional hierarchies and establish a new regime.
+        quest_starter: |-
+          A rebel leader offers you a place in their ranks. Why do you consider—or reject—their offer?
+      - roll: { min: 34, max: 67 }
+        summary: Rebels challenge specific norms.
+        description: |-
+          Not all rebels seek revolution; some fight for changes within the system, targeting outdated customs or oppressive practices.
+        quest_starter: |-
+          A group of young vampires begins to protest a centuries-old law. How do you become involved in their movement?
+      - roll: { min: 68, max: 100 }
+        summary: Rebels are outcasts.
+        description: |-
+          Rebels are a fringe element, shunned and hunted by mainstream vampire society for their defiance.
+        quest_starter: |-
+          A rebel in hiding seeks your protection. Why do you help—or betray—them?
+  blood_sorcery:
+    name: Blood Sorcery
+    type: truth
+    _source:
+      <<: *Source
+      page: 9
+    options:
+      - roll: { min: 1, max: 33 }
+        summary: Blood sorcery is a rare and forbidden art.
+        description: |-
+          Only a few vampires dare to practice this dangerous magic, as it is heavily restricted by vampire law.
+        quest_starter: |-
+          A powerful sorcerer demands a rare ingredient for a ritual. Why do you choose to aid—or oppose—them?
+      - roll: { min: 34, max: 67 }
+        summary: Blood sorcery is widely practiced.
+        description: |-
+          Many vampires use blood sorcery to enhance their powers, though it often comes with significant risks and costs.
+        quest_starter: |-
+          A rival vampire challenges you to a duel of sorcery. What stakes do you set, and how do you prepare?
+      - roll: { min: 68, max: 100 }
+        summary: Blood sorcery is mysterious and unpredictable.
+        description: |-
+          No one fully understands the origins or mechanics of blood sorcery, making it a source of both fascination and fear.
+        quest_starter: |-
+          An ancient text detailing lost sorceries has been uncovered. What lengths will you go to obtain it?
+  religion:
+    name: Religion
+    type: truth
+    _source:
+      <<: *Source
+      page: 10
+    options:
+      - roll: { min: 1, max: 33 }
+        summary: Religion condemns vampires.
+        description: |-
+          Vampires are seen as cursed beings, and religious institutions often seek to destroy them.
+        quest_starter: |-
+          A priest begins to rally mortals against vampires in Santa Maria. How do you counter their influence?
+      - roll: { min: 34, max: 67 }
+        summary: Vampires hold religious beliefs.
+        description: |-
+          Many vampires adhere to faiths that accommodate their existence, blending mortal and vampiric spirituality.
+        quest_starter: |-
+          A sacred relic important to vampires is stolen. What role do you play in retrieving it?
+      - roll: { min: 68, max: 100 }
+        summary: Religion is intertwined with vampirism.
+        description: |-
+          Some religious groups secretly include vampires, seeing them as chosen or cursed in alignment with their doctrines.
+        quest_starter: |-
+          A religious sect offers you sanctuary and demands loyalty in return. How do you respond?
+  deviance:
+    name: Deviance
+    type: truth
+    _source:
+      <<: *Source
+      page: 11
+    options:
+      - roll: { min: 1, max: 33 }
+        summary: Deviance is rare among vampires.
+        description: |-
+          Most vampires adhere strictly to tradition and the Façade, avoiding behaviors that could endanger their kind.
+        quest_starter: |-
+          A young vampire's reckless actions threaten the Façade. How do you intervene?
+      - roll: { min: 34, max: 67 }
+        summary: Deviance is a growing problem.
+        description: |-
+          Some vampires challenge traditions and norms, creating conflict within vampire society.
+        quest_starter: |-
+          A group of deviant vampires invites you to join them. What do they offer, and what risks does this pose?
+      - roll: { min: 68, max: 100 }
+        summary: Deviance is widespread.
+        description: |-
+          Many vampires have abandoned traditional rules, forcing society to adapt or risk collapse.
+        quest_starter: |-
+          A powerful vampire leader plans to reform society to accommodate deviance. What role do you play in their plans?
+
+  werewolves:
+    name: Werewolves
+    type: truth
+    _source:
+      <<: *Source
+      page: 12
+    options:
+      - roll: { min: 1, max: 33 }
+        summary: Werewolves are mortal enemies of vampires.
+        description: |-
+          Vampires and werewolves have an ancient feud, resulting in violent confrontations whenever they meet.
+        quest_starter: |-
+          A werewolf pack moves into Santa Maria, threatening your territory. How do you respond?
+      - roll: { min: 34, max: 67 }
+        summary: Werewolves and vampires coexist uneasily.
+        description: |-
+          While conflicts occur, both sides maintain an uneasy truce to avoid unnecessary bloodshed.
+        quest_starter: |-
+          A werewolf requests your help against a common enemy. What do they offer in return?
+      - roll: { min: 68, max: 100 }
+        summary: Werewolves are allies.
+        description: |-
+          Vampires and werewolves share common goals and often work together, though mistrust lingers.
+        quest_starter: |-
+          A werewolf ally asks for your help in a dangerous ritual. What risks are involved, and why do you agree?
+  elegies:
+    name: Elegies
+    type: truth
+    _source:
+      <<: *Source
+      page: 13
+    options:
+      - roll: { min: 1, max: 33 }
+        summary: Elegies are forgotten.
+        description: |-
+          These haunting songs of loss and memory have faded from vampire society, known only to the oldest among them.
+        quest_starter: |-
+          An ancient vampire offers to teach you an elegy. What must you do to earn their trust?
+      - roll: { min: 34, max: 67 }
+        summary: Elegies are preserved.
+        description: |-
+          Vampires maintain a rich tradition of elegies, which serve as both art and history.
+        quest_starter: |-
+          A rival vampire challenges you to perform an elegy at a gathering. How do you prepare, and what story do you choose to tell?
+      - roll: { min: 68, max: 100 }
+        summary: Elegies are evolving.
+        description: |-
+          Modern vampires have adapted elegies to contemporary styles, blending old and new in innovative ways.
+        quest_starter: |-
+          A young vampire creates a controversial new elegy. How do you react, and what does it mean for vampire society?
+  mortal_magic:
+    name: Mortal Magic
+    type: truth
+    _source:
+      <<: *Source
+      page: 14
+    options:
+      - roll: { min: 1, max: 33 }
+        summary: Mortals rarely possess magic.
+        description: |-
+          Magic is rare among mortals, and those who wield it are often unaware of their potential.
+        quest_starter: |-
+          A mortal accidentally casts a spell that reveals vampire activity. How do you address the situation?
+      - roll: { min: 34, max: 67 }
+        summary: Mortal magic is an emerging threat.
+        description: |-
+          Mortals are beginning to harness magic deliberately, posing new challenges for vampires.
+        quest_starter: |-
+          A group of mortal sorcerers forms a pact to hunt vampires. How do you confront them?
+      - roll: { min: 68, max: 100 }
+        summary: Mortal magic rivals vampiric powers.
+        description: |-
+          Mortals with magic are formidable adversaries, and some vampires even seek alliances with them.
+        quest_starter: |-
+          A mortal magician offers you a powerful enchantment—for a price. What do they demand, and how do you respond?

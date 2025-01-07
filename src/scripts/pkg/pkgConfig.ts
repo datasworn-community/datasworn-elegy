@@ -105,6 +105,16 @@ export const SunderedIsles: RulesPackageConfig = {
 	},
 }
 
+export const Elegy: RulesPackageConfig = {
+	type: 'expansion',
+	paths: {
+	   source: path.join(ROOT_SOURCE_DATA, 'elegy')
+	},
+	id: 'elegy',
+	pkg: { name: 'elegy', scope: PKG_SCOPE_COMMUNITY }
+}
+
+
 // // currently these just exist for testing purposes
 
 // export const Rsek: RulesPackageConfig = {

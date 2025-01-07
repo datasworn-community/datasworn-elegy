@@ -1,0 +1,1023 @@
+_id: elegy
+datasworn_version: "0.1.0"
+type: ruleset
+assets:
+  asset:
+      _source:
+        <<:  &Source
+          title: 'Elegy 3.5'
+          license: https://creativecommons.org/licenses/by-nc-sa/4.0
+          url: https://miraclem.itch.io/elegy
+          date: 2024-07-31
+          authors:
+            - name: moro de oliveira
+      name: Elegy Assets
+      type: asset_collection
+      description: |-
+        __Assets__ represent your abilities, background,skills, traits, and resources. When you create your character, you pick three assets.
+      contents:
+        acute_senses:
+          type: asset
+          category: Power
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 12
+          name: Acute Senses
+          requirement: None
+          abilities:
+            - text: |-
+                When you try to notice or find something with your senses, you may sacrifice blood (1-5) to gain an equal amount of bonus on your roll. The blood you spend to activate this power counts toward the bonus. 
+              enabled: true
+
+            - text: |-
+                When you do it, you may lose 1 more blood to re-roll any dice.
+            
+            - text: |-
+                Take +2 focus on a hit.
+
+        articulate:
+          type: asset
+          category: Skill
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 12
+          name: Articulate
+          requirement: None
+          abilities:
+            - text: |-
+                You have a witty and charming way with words. When you roll to persuade or socialize in a situation that requires +glamour, you may instead roll +intellect.
+              enabled: true
+
+            - text: |-
+                When you do it, add +1 and take +1 focus on a hit.
+
+            - text: |-
+                Your words are profound and reach deep within people. When you roll to persuade or socialize in a situation that requires +heart, you may instead roll +intellect.
+
+        bagger:
+          type: asset
+          category: Skill
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 12
+          name: Bagger
+          requirement: None
+          abilities:
+            - text: |-
+                Thanks to contacts in hospitals, you can get 2 blood bags per week. When you drink from one, roll +force. On a strong hit, restore 2 blood. On a weak hit or a miss, restore only 1.
+              enabled: true
+
+            - text: |-
+                You have the equipment and skills needed to collect blood. When you take blood from a victim (that could be hypnotized, dying, or willing), gain 1 extra blood bag.
+
+            - text: |-
+                When you resupply your blood bag stock from your hospital contacts, roll a die. On an even number, you get 3 blood bags. On an odd number, you get 4.
+
+        agility:
+          type: asset
+          category: Power
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 12
+          name: Agility
+          requirement: None
+          abilities:
+            - text: |-
+                When you perform a feat of supernatural agility, coordination, or speed, you may sacrifice blood (1-5) to gain an equal bonus on your roll. The blood you spend to activate this power counts toward the bonus.
+              enabled: true
+
+            - text: |-
+                When you do it, you may lose 1 more blood to re-roll any dice.
+
+            - text: |-
+                Take +2 focus on a hit.
+
+        artist:
+          type: asset
+          category: Skill
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 12
+          name: Artist
+          requirement: None
+          abilities:
+            - text: |-
+                When you present a work of art you’ve created or perform for an audience, roll the adequate stat, add +1, and take +2 focus on a hit. On a strong hit, also add +2 (one time only) if you interact with someone in the audience.
+              enabled: true
+
+            - text: |-
+                If you drink blood from someone you performed to or who has seen your art, restore full blood.
+
+            - text: |-
+                You can find deep meaning within art. When you analyze a work of art, decide what to look for:
+                  * Insight: Roll +intellect and add +1. On a hit, envision what helpful idea it revealed to you, and take +2 focus.
+                  * Comfort: Roll +heart and add +1. On a hit, envision how the experience brought you comfort. Restore +3 spirit.
+
+        blood_alchemy:
+          type: asset
+          category: Power
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 12
+          name: Blood Alchemy
+          requirement: None
+          abilities:
+            - text: |-
+                You can turn your blood into acid and shed it through shallow cuts in your veins. It will corrode most surfaces and destroy small items.
+              enabled: true
+
+            - text: |-
+                You can turn your blood into a paralyzing poison, which can be injected or drunk, that will affect both mortals and vampires. The victim stays immobilized for one scene.
+
+            - text: |-
+                You can heat a mortal’s blood. When you face a foe, you may spend blood and deal equal harm to the blood spent.
+
+        animal_drinker:
+          type: asset
+          category: Nature
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 12
+          name: Animal Drinker
+          requirement: None
+          abilities:
+            - text: |-
+                Unlike most vampires, you are able to feed on the blood of animals. Big animals (large dog, cow) don’t need to be killed to feed you, but small ones (bat, rat) do, and these restore only 1 blood.
+              enabled: true
+
+            - text: |-
+                You instinctively know how beasts behave. When you act based on your knowledge of animals, add +1 and take +1 focus on a hit.
+
+            - text: |-
+                If the body of an animal has blood in it, you can feed on its flesh instead of only drinking blood. When you do it, restore +1 blood.
+
+        awe:
+          type: asset
+          category: Power
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 12
+          name: Awe
+          requirement: None
+          abilities:
+            - text: |-
+                You are capable of radiating a supernatural aura of coolness, power, and majesty that draws undivided attention to you. You gain +1 forward when you act to make an impression on your audience.
+              enabled: true
+
+            - text: |-
+                You can project this aura to anything, not just yourself.
+
+            - text: |-
+                The attention of a crowd is very meaningful and important to you. When you Awe, you always gain +2 spirit on a strong hit.
+
+        buff:
+          type: asset
+          category: Power
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 12
+          name: Buff
+          requirement: None
+          abilities:
+            - text: |-
+                When you perform a feat of supernatural strength, stamina, or toughness, you may sacrifice blood (1-5) to gain an equal amount of bonus on your roll. The blood you spend to activate this power counts toward the bonus.
+              enabled: true
+
+            - text: |-
+                When you do it, you may lose 1 more blood to re-roll any dice.
+
+            - text: |-
+                Take +2 focus on a hit.
+
+        cutthroat:
+          type: asset
+          category: Combat Talent
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 12
+          name: Cutthroat
+          requirement: If you wield a bladed weapon...
+          abilities:
+            - text: |-
+                When you are in position to attack an unsuspecting foe, choose one before rolling:
+                - Add +2 and take +1 focus on a hit.
+                - Inflict +2 harm on a hit.
+              enabled: true
+
+            - text: |-
+                When you intimidate someone at the point of your blade, or when you rely on your blade outside of battle, add +1.
+            
+            - text: |-
+                Once per fight, when you perform a feint or misdirection, re-roll any dice and take +1 focus on a hit.
+
+        decay:
+          type: asset
+          category: Power
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 12
+          name: Decay
+          requirement: None
+          abilities:
+            - text: |-
+                With the power of your mind, you can engulf a corpse in flames and turn it into a pile of dust in a few moments.
+              enabled: true
+
+            - text: |-
+                You can cripple a foe’s body part, weakening it as if it was 100 years old, for one scene. In combat, roll +intellect and deal x2 harm.
+
+            - text: |-
+                You can make living people look dead for one scene. You need one minute of concentration to perform this.
+
+        driver:
+          type: asset
+          category: Skill
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 12
+          name: Driver
+          requirement: None
+          abilities:
+            - text: |-
+                Your vehicle provides speedy transport. When you drive fast or dangerously, add +1 and take +1 focus on a hit. On a strong hit with a match, take +1 focus.
+              enabled: true
+
+            - text: |-
+                When you roll to maneuver your vehicle and burn focus to improve your result, roll a die. On a 9, 8, or 0, you don’t have to reset your focus.
+
+            - text: |-
+                When you attempt something dangerous by taking a hit or crashing through an obstacle, you may reroll any dice. If you do, take +1 focus on a hit.
+
+        empath:
+          type: asset
+          category: Skill
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 12
+          name: Empath
+          requirement: None
+          abilities:
+            - text: |-
+                When you look into the eyes of someone and try to read their intent or emotions, add +1 and take +1 focus on a hit.
+              enabled: true
+
+            - text: |-
+                As above, and if you score a hit as you read them, you may subtly influence their attitude or actions, such as making a hostile being hesitate. Take another +1 focus. If in a fight, mark progress.
+
+            - text: |-
+                When you attempt to soothe a being’s distress through empathy, roll +heart and take +1 focus on a hit.
+
+        fame:
+          type: asset
+          category: Skill
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 12
+          name: Fame
+          requirement: None
+          abilities:
+            - text: |-
+                People from a specific subculture know and praise you (for your skills, deeds, looks, etc.). When dealing with someone who’s already impressed by you, add +1 to all glamour rolls. On the other hand, take -1 whenever you need to remain anonymous or hide your presence in public settings.
+              enabled: true
+
+            - text: |-
+                When you spend time talking to a fan or reflecting on your fame to boost your self-confidence, take another +2 spirit on a strong hit (+4 instead of +2), or +1 on a weak hit (+3 instead of +2).
+
+            - text: |-
+                When you make a conclusion roll to create a bond with someone who’s impressed by you, take +2 focus and reroll any dice.
+
+        familiar:
+          type: asset
+          category: Power
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 12
+          name: Familiar
+          requirement: None
+          abilities:
+            - text: |-
+                When you drain a small animal (cat, owl, raven, dog...) of its blood and feed it yours, its corpse comes back to life as a familiar for one week and efficiently obeys simple, single-word commands.
+              enabled: true
+
+            - text: |-
+                When you use your familiar’s keen senses to track something or investigate a place, add +1 and take +1 focus on a hit.
+
+            - text: |-
+                When you fight alongside your familiar and score a hit, inflict +1 harm or take +1 focus.
+
+        fierce:
+          type: asset
+          category: Combat Talent
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 12
+          name: Fierce
+          requirement: None
+          abilities:
+            - text: |-
+                When you attack using your sharp teeth and claws as a weapon, you may add +2. If you do (decide before rolling), inflict +1 harm on a strong hit and count a weak hit as a miss.
+              enabled: true
+
+            - text: |-
+                When you do it and score a hit against a mortal, you also gain +1 blood. On a match, gain +3.
+
+            - text: |-
+                When you attempt to feed on someone by assaulting them with brute force, or when you try to disarm, trip, shove, grapple, or stun your foe, add +1 and take +1 focus on a hit.
+
+        gunslinger:
+          type: asset
+          category: Combat Talent
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 12
+          name: Gunslinger
+          requirement: If you wield a gun...
+          abilities:
+            - text: |-
+                When you take a moment to aim before shooting, choose your approach and add +1:
+                - Trust your instincts: Roll +intellect, and take +2 focus on a strong hit.
+                - Line up your shot: Roll +dexterity, and take +1 focus on a hit.
+              enabled: true
+
+            - text: |-
+                Once per fight, you may take extra shots and suffer -2 focus (decide before rolling). When you do, re-roll any dice. On a hit, inflict +2 harm and take +1 focus.
+
+            - text: |-
+                When you intimidate or persuade someone while armed, add +1 and take +1 focus on a hit.
+
+        ghost_whisperer:
+          type: asset
+          category: Skill
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 12
+          name: Ghost Whisperer
+          requirement: None
+          abilities:
+            - text: |-
+                You are able to communicate with the dead. When you approach a corpse, you may talk to their spirit for up to one scene as if it was a living person. They may share information or insight, but spirits often speak in cryptic ways.
+              enabled: true
+
+            - text: |-
+                You may command a ghost to do as you say. Roll +force. On a strong hit, they will obey three orders. On a weak hit, they obey one. On a miss, they don’t. Ghosts can move objects, manipulate electronic devices, and speak to people.
+
+            - text: |-
+                You don’t need the corpse of someone to talk to their ghost. Once per session, you may call one ghost from the underworld and speak with them just as if their body was lying in front of you.
+
+        heartbreaker:
+          type: asset
+          category: Skill
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 13
+          name: Heartbreaker
+          requirement: None
+          abilities:
+            - text: |-
+                When you act by being seductive, add +2. On a strong hit with a match, your charm creates an unexpected opportunity; take the value of your glamour as +focus.
+              enabled: true
+
+            - text: |-
+                When you charm your way out of a situation and burn focus to gain a strong hit, take +1 focus after you reset. If you envision how this momentary success leaves you fated for future trouble, gain 1 xp.
+
+            - text: |-
+                When you feed from someone you seduced, you gain other +2 blood (restoring +4 in total).
+
+        home_invader:
+          type: asset
+          category: Skill
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 13
+          name: Home Invader
+          requirement: None
+          abilities:
+            - text: |-
+                When you break into a protected area or hack a secure system, add +1 and take +1 focus on a hit. On a strong hit with a match, access is easier than expected; take another +1 focus.
+              enabled: true
+
+            - text: |-
+                When hunting or feeding inside the place you are invading, re-roll any dice.
+
+            - text: |-
+                When you search a secure area for any kind of useful information with observation, you may re-roll any dice.
+
+        horrendous:
+          type: asset
+          category: Nature
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 13
+          name: Horrendous
+          requirement: None
+          abilities:
+            - text: |-
+                Vampirism turned your body into an atrocious version of what it was in life. Your glamour is reduced by 1, but you gain +1 and take +1 focus on a hit when you intimidate, scare, hide, or sneak.
+              enabled: true
+
+            - text: |-
+                You relish the repulse you inspire in others. When you scare or intimidate based on your looks, take +1 spirit on a hit, and +3 on a match.
+
+            - text: |-
+                Your lonely existence gave you deep insight into the human soul. When you attempt to read someone’s true intentions or feelings, re-roll any dice.
+
+        hunting_field:
+          type: asset
+          category: Skill
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 13
+          name: Hunting Field
+          requirement: None
+          abilities:
+            - text: |-
+                You have a favorite place to hunt (a building, a square, a small park, a shop). When you attempt to feed within it, add +1 and take +1 focus on a hit.
+              enabled: true
+
+            - text: |-
+                When you attempt to hide, sneak, or observe someone or something within your hunting field, add +1 and take +1 focus on a hit.
+
+            - text: |-
+                When you spend time and relax in your hunting field to recover spirit, gain +2 spirit (+4 total).
+
+        hypnosis:
+          type: asset
+          category: Power
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 13
+          name: Hypnosis
+          requirement: None
+          abilities:
+            - text: |-
+                When you meet a victim in the eyes, you may give it a simple command that will be obeyed instantly (“leave”, “follow”) unless it’s harmful to them or impossible (“die”, “fly”). The victim goes into a trance until right after the action, and won’t recall the incident.
+              enabled: true
+
+            - text: |-
+                Your command can be complex (“take this car and drive to this address at this time this day of the month”) and have an activation trigger (“...when you hear the word Genesis”).
+
+            - text: |-
+                You may give a suggestion that reshapes the memories of the victims (“You couldn’t be in the crime scene because last Saturday morning at 8am you went to the grocery store to buy milk and eggs to bake a cake”). The more detailed the suggestion is, the more effective.
+
+        illusion:
+          type: asset
+          category: Power
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 13
+          name: Illusion
+          requirement: None
+          abilities:
+            - text: |-
+                For one scene, you can conjure a static illusion that has no actual solid presence and confuses one sense (a stench, a sound, a tattoo, etc.).
+              enabled: true
+
+            - text: |-
+                Your illusions may appeal to all senses (you can make a cup of hot water feel like a glass of cool champagne).
+
+            - text: |-
+                You can create illusions with motion (person, running water, living being, fire).
+
+        lair:
+          type: asset
+          category: Skill
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 13
+          name: Lair
+          requirement: None
+          abilities:
+            - text: |-
+                You have your own place to sleep. It’s not much, but it beats abandoned buildings. Whenever you awaken after spending a day resting in your lair, roll +heart. On a hit, gain +1 spirit. On a match, also gain +1 health.
+              enabled: true
+
+            - text: |-
+                Your lair is very presentable. When you attempt to bring a victim to it, add +1 and take +1 focus on a hit.
+
+            - text: |-
+                Your lair is full of useful stuff. When you search for an useful object or tool inside it, add +1 and take +1 focus on a hit.
+
+        lore_keeper:
+          type: asset
+          category: Skill
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 13
+          name: Lore Keeper
+          requirement: None
+          abilities:
+            - text: |-
+                When you make a conclusion roll to finish a quest to recover valuable knowledge or an extraordinary relic, take +2 focus. You may re-roll any dice.
+              enabled: true
+
+            - text: |-
+                When you conduct extended research or study, re-roll any dice. On a match, you piece together an extraordinary or harrowing new theory; envision the nature 
+
+        magnetism:
+          type: asset
+          category: Power
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 14
+          name: Magnetism
+          requirement: None
+          abilities:
+            - text: |-
+                When you impress or attract someone, you may sacrifice blood (1-5) to gain an equal amount of bonus on your roll. The blood you spend to activate this power counts to the bonus.
+              enabled: true
+
+            - text: |-
+                When you do it, you may lose 1 more blood to re-roll any dice.
+
+            - text: |-
+                Take +2 focus on a hit.
+
+        mannequin:
+          type: asset
+          category: Skill
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 14
+          name: Mannequin
+          requirement: None
+          abilities:
+            - text: |-
+                You have a reliable source of blood in a mortal fascinated by you. They swore to keep your secret and be readily available whenever you are hungry. If they die and you want another mannequin, you have to pick this asset again from the start, but you may buy it for 1 xp.
+              enabled: true
+
+            - text: |-
+                Your mannequin trusts you way more than they should. When you gather info about the mortal world from your mannequin, you may re-roll any dice.
+
+            - text: |-
+                Having a steady source of blood brings you peace of mind. When you feed from your mannequin, take +1 spirit on a hit, and +2 spirit on a match.
+
+        marked:
+          type: asset
+          category: Skill
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 14
+          name: Marked
+          requirement: None
+          abilities:
+            - text: |-
+                You are hunted by a power or authority. When you score a weak hit, you may improve the result to a strong hit. If you do, fill one segment of a four-segment progress track to represent hunters closing in. When the track is filled, a notable foe or force has tracked you down. If you overcome them or escape, reset the track and gain 1xp.
+              enabled: true
+
+            - text: |-
+                When you act by hiding, concealing your identity, or fleeing from a pursuer, add +1 and take +1 focus on a hit.
+
+            - text: |-
+                When you finish a quest by clearing your name or defeating the power or authority who marked you as a fugitive, gain this ability at no cost. You may then exchange this asset for another with the same number of marked abilities.
+
+        mutation:
+          type: asset
+          category: Power
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 14
+          name: Mutation
+          requirement: None
+          abilities:
+            - text: |-
+                You can merge with the earth below you for one scene. You can still feed if blood falls into the ground where you are. You can also climb walls without difficulty.
+              enabled: true
+
+            - text: |-
+                In this scene, you can turn into an animal (a bat, a wolf, a crow, a snake, etc.) for as long, and as many times, as you want.
+
+            - text: |-
+                For one scene, you are able to turn your skin into a scaly hide that grants you +1 in rolls to defend against damage.
+
+        picky_taste:
+          type: asset
+          category: Nature
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 14
+          name: Picky Taste
+          requirement: None
+          abilities:
+            - text: |-
+                You always crave for the same specific type of blood (A-, blondes, doctors, leninists, etc.). Whenever you feed from this type, always restore full blood. Whenever you feed from other mortals, always gain -1 blood.
+              enabled: true
+
+            - text: |-
+                Experience made your stomach stronger. When feeding from mortals that are not your favorite type, you may suffer -1 spirit instead of gaining -1 blood.
+
+            - text: |-
+                You know your victims’ habits like the back of your hand. When you roll to look for a mortal of your type to feed from, reroll any dice.
+
+        reanimation:
+          type: asset
+          category: Power
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 14
+          name: Reanimation
+          requirement: None
+          abilities:
+            - text: |-
+                For one scene, you are able to reanimate a dead body and make it perform a simple function (dig a hole, lift heavy objects, walk there).
+              enabled: true
+
+            - text: |-
+                You can command the corpse to attack someone or something. When you fight alongside it, deal +1 harm and gain +1 focus on a hit.
+
+            - text: |-
+                You can make the corpse talk and behave as a very weird human being for one scene.
+
+        resilient:
+          type: asset
+          category: Skill
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 14
+          name: Resilient
+          requirement: None
+          abilities:
+            - text: |-
+                When you spend blood to heal yourself, choose one:
+                Add +1 and take +1 focus on a hit
+                Gain +1 health on a hit (+3 in total)
+              enabled: true
+
+            - text: |-
+                You have enough patience and stamina to take care of whatever wound you suffer, as long as you have at least a few hours and a comfortable place. When you burn focus to heal yourself, you don’t need to reset it.
+
+            - text: |-
+                You have a high recovery rate. When you feed, you may exchange your gained points of blood for health.
+
+        seer:
+          type: asset
+          category: Skill
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 14
+          name: Seer
+          requirement: None
+          abilities:
+            - text: |-
+                Once per day, you may envision experiencing a prophetic dream (check the oracle for details). If you record the answer, and later face a situation which gives truth to the vision, take an automatic strong hit (one time only) when making acting on your foresight. Then, clear the prophecy. Only one prophecy can be active at a time.
+              enabled: true
+
+            - text: |-
+                When you focus or meditate to gain insight about a place, being, or situation, add +1 and take +1 focus on a hit.
+
+            - text: |-
+                When you score a strong hit as you socialize with a community or search a place, you may envision gaining sudden and unbidden insight about the location. If you do, take +2 focus.
+
+        shadow_touch:
+          type: asset
+          category: Power
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 14
+          name: Shadow Touch
+          requirement: None
+          abilities:
+            - text: |-
+                You can reshape, stretch or overlap shadows, or even separate them from their casting bodies. Your manipulation grants them a mystical density that can smother mortals.
+              enabled: true
+
+            - text: |-
+                You can create a cloud of pitch-black darkness that obscures all light and sound. The cloud is just large enough for you to hide in it.
+
+            - text: |-
+                The shadows are able to grab and restrain foes.
+
+        sixth_sense:
+          type: asset
+          category: Power
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 15
+          name: Sixth Sense
+          requirement: None
+          abilities:
+            - text: |-
+                You can sense the intentions of people around you. When you are next to other individuals, you can awaken your powers to ask two of the following questions to the oracle. Then, add +1 and take +1 focus the next move related to the answer.
+                - Who's the most susceptible person in here?
+                - Who's most likely to harm me?
+                - Who's most likely to give me what I want?
+              enabled: true
+
+            - text: |-
+                You can read people’s thoughts and memories. Once per night, you may psychically inspect the mind of someone next to you as if it were a book. When you hold an object in your hands, you are able to pick up psychic impressions from it and learn who held it last and when it was last held.
+
+        stalker:
+          type: asset
+          category: Skill
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 15
+          name: Stalker
+          requirement: None
+          abilities:
+            - text: |-
+                When you attempt to follow someone in a crowd without being noticed, add +1 and take +1 focus on a hit.
+              enabled: true
+
+            - text: |-
+                The bonus now applies to any situation, not only crowds.
+
+            - text: |-
+                When you attempt to eavesdrop or watch someone, add +1 and take +1 focus on a hit.
+
+        technomancy:
+          type: asset
+          category: Power
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 15
+          name: Technomancy
+          requirement: None
+          abilities:
+            - text: |-
+                You can cause an electronic device to malfunction for 1 minute.
+              enabled: true
+
+            - text: |-
+                You can mystically encrypt or decrypt a device’s controls, making it inaccessible for everyone else. This also works on media (CD, flash drive).
+
+            - text: |-
+                Using only words, you can manipulate an electronic device remotely. The device will obey you even if you don’t understand how it works. Of course, it won’t do something it can’t (a 3d printer will “print a stake”, but will not “make coffee”).
+
+        terror:
+          type: asset
+          category: Power
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 15
+          name: Terror
+          requirement: None
+          abilities:
+            - text: |-
+                You are able to exude a deeply unsettling aura that disturbs those who make eye contact with you. When you make a roll to intimidate someone, you may release this aura and reroll any dice.
+              enabled: true
+
+            - text: |-
+                Your aura twists the victim’s mind and causes frightening hallucinations. Take +2 focus on a hit.
+
+            - text: |-
+                You can project this aura to anything, not only yourself.
+
+        veil:
+          type: asset
+          category: Power
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 15
+          name: Veil
+          requirement: None
+          abilities:
+            - text: |-
+                You can become invisible for one scene. While invisible, when you hide, sneak, or ambush someone, add +1 and take +1 focus on a hit.
+              enabled: true
+
+            - text: |-
+                When you intentionally drop your veil to reveal yourself for dramatic or surprising effect, foregoing its further use in this situation, take +2 focus.
+
+            - text: |-
+                Instead of disappearing, you alter other people’s perception of you and how they see you. You can appear as someone specific (“Uncle Joe”) or as a reflection of subjective concepts that could mean one thing for each person (“Caring Old Lady”, “The Woman of Your Dreams”).
+
+        weak_blood:
+          type: asset
+          category: Nature
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 15
+          name: Weak Blood
+          requirement: None
+          abilities:
+            - text: |-
+                Your body reacts differently to vampirism. You can eat, drink water, have sex and appear human in other ways without spending blood. Daylight does not harm you, but you still feel tired during the day and must spend 1 blood for each day (not night) scene you play. You have no fangs and must rely on sharp objects to draw blood from your victims. When you feed from someone, you always lose 1 focus no matter the result of your roll.
+              enabled: true
+
+            - text: |-
+                In some ways, time brought you closer to the mortals around you. Whenever you communicate with or read the emotions of humans, add +1 and take +1 focus on a hit.
+
+            - text: |-
+                Your experience with your distinct nature shaped your presence differently than other vampires. Whenever you hide your vampiric nature from other vampires or even mortals, re-roll any dice.
+
+        weather_command:
+          type: asset
+          category: Power
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 15
+          name: Weather Command
+          requirement: None
+          abilities:
+            - text: |-
+                You can conjure fog. When you hide or sneak within it, add +1 and take +1 focus on a hit.
+              enabled: true
+
+            - text: |-
+                You can make it rain. When it’s raining and you roll to hide or sneak, you may reroll any dice. Take +1 focus on a hit.
+
+            - text: |-
+                You can make winds blow. When it’s windy and you roll to protect against gunshots, you may reroll any dice. Take +1 focus on a hit.
+
+        wilderness:
+          type: asset
+          category: Power
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 15
+          name: Wilderness
+          requirement: None
+          abilities:
+            - text: |-
+                You understand beasts and communicate with them for one scene. You also see clearly in pitch black.
+              enabled: true
+
+            - text: |-
+                Being close to beasts strengthens your instincts. When you react or search by using your senses, you may roll +force instead of +intellect.
+
+            - text: |-
+                You can make your blood attract dangerous predators. When you do it and pour a few drops somewhere, beasts will immediately follow the smell and try to devour the blood.
+
+        path_of_the_demon:
+          type: asset
+          category: Ritual
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 15
+          name: Path of the Demon
+          requirement: None
+          abilities:
+            - text: |-
+                When you mix your blood with dirt and allow it to sit for a few hours, you create a poison lethal to mortals. Those who consume it will die in their sleep, peacefully, seemingly from natural causes.
+              enabled: true
+
+            - text: |-
+                When you pour a few drops of your blood into a vial of water and utter magical words, you transform the liquid into a drug capable of incapacitating a vampire for an entire night. The drug can be injected or ingested.
+
+            - text: |-
+                You can extract the soul of a victim from her body and transfer it permanently into one of her possessions, transforming it into a haunted and cursed object. When you unite her fresh corpse with a cherished possession of hers and sing magic words around it, the effect is activated. The object will interfere negatively on any action performed in its vicinity, except for you.
+
+
+        path_of_the_eye:
+          type: asset
+          category: Ritual
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 16
+          name: Path of the Eye
+          requirement: None
+          abilities:
+            - text: |-
+                When you place crossed bones and skulls at every entrance of a room (including windows and other openings) and seal them with a glyph drawn in your own blood, you ensure that every question asked within the room receives a truthful and immediate answer.
+              enabled: true
+
+            - text: |-
+                When you draw a circle in blood and walk around it, you are able to witness events from up to five years ago in that area.
+
+            - text: |-
+                When you mix a drop of your blood in a small pool of water and utter magic words while holding the possession of a target, you are able to hear and see the surroundings of the observed through the water until you leave.
+
+        path_of_the_guardian:
+          type: asset
+          category: Ritual
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 16
+          name: Path of the Guardian
+          requirement: None
+          abilities:
+            - text: |-
+                When you draw a circle in blood and chant magic words, the area will magically repel mortals and animals.
+              enabled: true
+
+            - text: |-
+                When you possess more than one point of this asset, you can choose to repel only certain types of creatures. For instance, even with points 1 and 2, you can opt to repel only supernatural living creatures if desired.
+
+            - text: |-
+                You can repel vampires and the undead.
+
+        path_of_the_pursuer:
+          type: asset
+          category: Ritual
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 16
+          name: Path of the Pursuer
+          requirement: None
+          abilities:
+            - text: |-
+                When you let blood flow from the palms of your hands, you can fashion a whip. When employed in combat, treat it as a heavy impact weapon (refer to Harm on page 40).
+              enabled: true
+
+            - text: |-
+                When you touch the center of your chest with red-hot metal, it renders your heart impervious to a stake for one night. Endure 2 harm.
+
+            - text: |-
+                When you submerge a pebble in blood and recite magical words, you transform the stone into a tracking device that always reveals in which direction it is. The effect persists until the pebble is destroyed.
+
+        path_of_radiance:
+          type: asset
+          category: Ritual
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 16
+          name: Path of Radiance
+          requirement: None
+          abilities:
+            - text: |-
+                When you extinguish a candle with blood, you are granted the ability to withstand fatigue induced by daylight. You can remain awake for an entire day, needing rest only in the subsequent sunlight.
+              enabled: true
+
+            - text: |-
+                When you sleep in a brightly lit location, you can reverse your sleep cycle. Now, you awaken at dawn and rest at dusk. The effects endure until you sleep in a dark place.
+
+            - text: |-
+                When you awaken the powers of your blood to appear human while reflecting on a potent memory of your mortal past, you extend the effects to 24 hours instead of just one scene.
+
+        path_of_the_spider:
+          type: asset
+          category: Ritual
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 16
+          name: Path of the Spider
+          requirement: None
+          abilities:
+            - text: |-
+                When you wash your face in blood and speak the name of a victim, she will experience intense hunger. A vampire will be induced to starvation, and will act out of hunger.
+              enabled: true
+
+            - text: |-
+                When you burn a piece of paper marked with your bloody hand print and say the name of a vampire within a one-kilometer radius, the victim will lose the reanimating power of blood and turn into a corpse for a whole night.
+
+            - text: |-
+                This ceremony is only potent against living entities. By burning a strand of hair, or any other refuse from the subject’s body, and uttering mystical incantations, a curse is placed that you can activate at will. When you do, the victim’s throat splits, and their bowels forcefully expel from their body, leading to almost certain death, even with immediate medical intervention.
+
+        path_of_the_tongue:
+          type: asset
+          category: Ritual
+          _source:
+            <<: &AssetSource
+              <<: *Source
+            page: 16
+          name: Path of the Tongue
+          requirement: None
+          abilities:
+            - text: |-
+                When you inscribe a message in blood on a piece of paper and utter the recipient’s name, the message manifests before her. It may appear on any solid surface within their sight (a desk, a mirror, another piece of paper) and vanishes upon being read.
+              enabled: true
+
+            - text: |-
+                When you meditate silently for 30 minutes while repeating the name of someone with whom you share a blood link (or your progenitor) you can communicate telepathically with her for one scene.
+
+            - text: |-
+                When you set fire to the tongue of a victim, you gain the ability to comprehend all languages she knows. This effect is permanent.

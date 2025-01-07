@@ -1,0 +1,1325 @@
+_id: elegy
+datasworn_version: "0.1.0"
+type: ruleset
+<<: &Source
+  title: 'Elegy 3.5 Moves'
+  license: https://creativecommons.org/licenses/by-nc-sa/4.0
+  url: https://miraclem.itch.io/elegy
+  date: 2024-07-31
+  authors:
+    - name: moro de oliveira
+moves:
+  adventure:
+    name: Adventure Moves
+    type: move_category
+    _source:
+      <<: *Source
+      page: 2
+    summary: Adventure moves are used to navigate risks, gain information, and secure advantages during your journey.
+    contents:
+      face_danger:
+        name: Face Danger
+        type: move
+        roll_type: action_roll
+        trigger:
+          text: When you attempt something risky or react to an imminent threat...
+          conditions:
+            - text: With stealth, speed, or coordination
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: dexterity
+            - text: With courage, willpower, or empathy
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: heart
+            - text: With aggression, strength, or toughness
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: force
+            - text: With charm, composure, or manipulation
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: glamour
+            - text: With expertise, focus, or observation
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: intellect
+        _source:
+          <<: *Source
+          page: 2
+        text: |-
+          When you attempt something risky or react to an imminent threat, envision your action and roll. If you act...
+            - With stealth, speed, or coordination: Roll +dexterity.
+            - With courage, willpower, or empathy: Roll +heart.
+            - With aggression, strength, or toughness: Roll +force.
+            - With charm, composure, or manipulation: Roll +glamour.
+            - With expertise, focus, or observation: Roll +intellect.
+          On a __strong hit__, you are successful. Take +1 focus.
+          On a __weak hit__, you succeed but at a cost. Take +1 focus and  [Pay the Price](datasworn:move:elegy/suffer/pay_the_price).
+          On a __miss__, you fail or suffer a dire consequence. [Pay the Price](datasworn:move:elegy/suffer/pay_the_price).
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you are successful. Take +1 focus.
+          weak_hit:
+            text: |-
+              On a __weak hit__, you succeed but at a cost. Take +1 focus and [Pay the Price](datasworn:move:elegy/suffer/pay_the_price).
+          miss:
+            text: On a __miss__, you fail or suffer a dire consequence. [Pay the Price](datasworn:move:elegy/suffer/pay_the_price).
+
+      secure_an_advantage:
+        name: Secure an Advantage
+        type: move
+        roll_type: action_roll
+        trigger:
+          text: When you assess a situation, make preparations, or attempt to gain leverage...
+          conditions:
+            - text: With stealth, speed, or coordination
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: dexterity
+            - text: With courage, willpower, or empathy
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: heart
+            - text: With aggression, strength, or toughness
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: force
+            - text: With charm, composure, or manipulation
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: glamour
+            - text: With expertise, focus, or observation
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: intellect
+        _source:
+          <<: *Source
+          page: 3
+        text: |-
+          When you assess a situation, make preparations, or attempt to gain leverage, envision your action and roll. If you act...
+            - With stealth, speed, or coordination: Roll +dexterity.
+            - With courage, willpower, or empathy: Roll +heart.
+            - With aggression, strength, or toughness: Roll +force.
+            - With charm, composure, or manipulation: Roll +glamour.
+            - With expertise, focus, or observation: Roll +intellect.
+          On a __strong hit__, take both benefits:
+            - Take +2 focus.
+            - Add +1 on your next roll (not a Conclusion move).
+          On a __weak hit__, take one benefit:
+            - Take +2 focus or add +1 on your next roll.
+          On a __miss__, you fail or your assumptions betray you. [Pay the Price](datasworn:move:elegy/suffer/pay_the_price).
+        outcomes:
+          strong_hit:
+            text: "On a __strong hit__, Take both benefits: +2 focus and +1 on your next roll."
+          weak_hit:
+            text: "On a __weak hit__, Take one benefit: +2 focus or +1 on your next roll."
+          miss:
+            text: "On a __miss__, you fail or your assumptions betray you. [Pay the Price](datasworn:move:elegy/suffer/pay_the_price)."
+
+      gather_information:
+        name: Gather Information
+        type: move
+        roll_type: action_roll
+        trigger:
+          text: When you search for clues, conduct an investigation, or analyze evidence...
+          conditions:
+            - method: player_choice
+              roll_options:
+                - using: stat
+                  stat: intellect
+        _source:
+          <<: *Source
+          page: 4
+        text: |-
+          When you search for clues, conduct an investigation, or analyze evidence, roll +intellect. If you act within a community or ask questions of someone you share a bond with, add +1.
+          On a __strong hit__, you discover something helpful and specific. Envision what you learn, and take +2 focus.
+          On a __weak hit__, you discover something that complicates your quest or introduces new danger. Take +1 focus.
+          On a __miss__, you unearth a dire threat or an unwelcome truth that undermines your quest. [Pay the Price](datasworn:move:elegy/suffer/pay_the_price).
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, You discover something helpful and specific. Take +2 focus.
+          weak_hit:
+            text: On a __weak hit__, You discover something that complicates your quest or introduces danger. Take +1 focus.
+          miss:
+            text: On a __miss__, you unearth a dire threat or unwelcome truth. [Pay the Price](datasworn:move:elegy/suffer/pay_the_price).
+
+      aid_your_ally:
+        name: Aid Your Ally
+        type: move
+        roll_type: no_roll
+        trigger:
+          text: When you Secure an Advantage in direct support of an ally...
+        _source:
+          <<: *Source
+          page: 4
+        text: |-
+          When you Secure an Advantage in direct support of an ally and score a hit, they (instead of you) can take the benefits of the move. If you are in combat and score a strong hit, you and your ally have initiative.
+    
+      compel:
+        name: Compel
+        type: move
+        roll_type: action_roll
+        trigger:
+          text: When you try to persuade someone or make them an offer...
+          conditions:
+            - text: Charm or lie
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: glamour
+            - text: Threaten or incite
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: force
+            - text: Pacify or encourage
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: heart
+        _source:
+          <<: *Source
+          page: 5
+        text: |-
+          When you try to persuade someone or make them an offer, envision your approach. If you...
+            - Charm or lie: Roll +glamour.
+            - Threaten or incite: Roll +force.
+            - Pacify or encourage: Roll +heart.
+          On a __strong hit__, they’ll do what you want or agree to your conditions. Take +1 focus.
+          On a __weak hit__, as above, but their agreement comes with a demand or complication. Envision their counteroffer.
+          On a __miss__, they refuse or make a demand that costs you greatly. [Pay the Price](datasworn:move:elegy/suffer/pay_the_price).
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, they’ll do what you want or agree to your conditions. Take +1 focus.
+          weak_hit:
+            text: On a __weak hit__, they’ll do what you want, but their agreement comes with a demand or complication. Envision their counteroffer.
+          miss:
+            text: On a __miss__, they refuse or make a demand that costs you greatly. [Pay the Price](datasworn:move:elegy/suffer/pay_the_price).
+
+      use_power:
+        name: Use Power
+        type: move
+        roll_type: action_roll
+        trigger:
+          text: When you use your supernatural abilities to activate a power (read on asset card)...
+          conditions:
+            - text: If asset card indicates dexterity
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: dexterity
+            - text: If asset card indicates heart
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: heart
+            - text: If asset card indicates force
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: force
+            - text: If asset card indicates glamour
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: glamour
+            - text: If asset card indicates intellect
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: intellect
+            - text: Appear human for a scene (blushing, being able to have sex or consume food)
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: glamour
+        _source:
+          <<: *Source
+          page: 5
+        text: |-
+          When you use your supernatural abilities to activate a power, visualize the effects you want to manifest and roll the stat indicated in its asset card. If you use them to appear human for a scene (blushing, being able to have sex or consume food), roll +Glamour.
+          On a __strong hit__, the power is activated successfully. Take +1 focus.
+          On a __weak hit__, the power is activated successfully, but you get hungrier. Spend 1 blood.
+          On a __miss__, you get hungrier and the power is activated, but not without consequences. Spend 1 blood and [Pay the Price](datasworn:move:elegy/suffer/pay_the_price).
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, the power is activated successfully. Take +1 focus.
+          weak_hit:
+            text: On a __weak hit__, the power is activated successfully, but you get hungrier. Spend 1 blood.
+          miss:
+            text: On a __miss__, you get hungrier and the power is activated, but not without consequences. Spend 1 blood and [Pay the Price](datasworn:move:elegy/suffer/pay_the_price).
+
+      perform_ritual:
+        name: Perform Ritual
+        type: move
+        roll_type: action_roll
+        trigger:
+          text: When you perform a ritual of blood magic, envision what you want to achieve and how you perform it...
+          conditions:
+            - method: player_choice
+              roll_options:
+                - using: stat
+                  stat: intellect
+        _source:
+          <<: *Source
+          page: 6
+        text: |-
+          When you perform a ritual of blood magic, envision what you want to achieve and how you perform it. Then, roll +Intellect.
+          - On a __strong hit__, the ritual is performed successfully. Take +1 focus.
+          - On a __weak hit__, the ritual is performed successfully, but it consumes the blood within you. Spend 1 blood.
+          - On a __miss__, the ritual consumes your blood and has undesired consequences. Spend 1 blood and roll: \n {{table>move.oracle_rollable:elegy/adventure/perform_ritual.perform_ritual}}
+            - 1-20: The ritual has the opposite effect.
+            - 21-40: It attracts mortal attention.
+            - 41-60: It affects a different target.
+            - 61-80: It has no effect, and you waste or lose resources needed to perform it again.
+            - 81-00: It has no effect, and it consumes you: lose 2 points of blood, health, or spirit (pick 1).
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, the ritual is performed successfully. Take +1 focus.
+          weak_hit:
+            text: On a __weak hit__, the ritual is performed successfully, but it consumes your blood. Spend 1 blood.
+          miss:
+            text: On a __miss__, the ritual consumes your blood and has undesired consequences. Spend 1 blood and roll on the list below.
+        oracles:
+          perform_ritual:
+            name: Perform Ritual Consequences
+            oracle_type: table_text
+            type: oracle_rollable
+            rows:
+              - roll: { min: 1, max: 20 }
+                text: 'The ritual has the opposite effect.'
+              - roll: { min: 21, max: 40 }
+                text: 'It attracts mortal attention.'
+              - roll: { min: 41, max: 60 }
+                text: 'It affects a different target.'
+              - roll: { min: 61, max: 80 }
+                text: 'It has no effect, and you waste or lose resources needed to perform it again.'
+              - roll: { min: 81, max: 100 }
+                text: 'It has no effect, and it consumes you: lose 2 points of blood, health, or spirit (pick 1).'
+
+      rest:
+        name: Rest
+        type: move
+        roll_type: action_roll
+        trigger:
+          text: When you spend the whole daytime in deep sleep in a dark place...
+          conditions:
+            - text: In a secure lair or abandoned places
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: heart
+                - using: stat
+                  stat: intellect
+        _source:
+          <<: *Source
+          page: 6
+        text: |-
+          When you spend the whole daytime in deep sleep in a dark place, roll +heart or +intellect, whichever is higher. By default, you need the Lair asset to have access to a secure place to sleep you can call yours. If you don’t have it, you must sleep in abandoned places.
+          On a __strong hit__, you rest well, and gain both of the following benefits:
+          - Restore 1 health
+          - Gain +2 focus
+          On a __weak hit__, you rest with only partial success. You gain only one of the benefits:
+          - Restore 1 health or Gain +2 focus.
+          On a __miss__, choose one of the following:
+          - You get hungrier: Lose 1 blood
+          - You don't sleep well: Lose 1 focus
+        outcomes:
+          strong_hit:
+            text: "On a __strong hit__, you rest well and gain both bonuses: Restore 1 health and Gain +2 focus."
+          weak_hit:
+            text: "On a __weak hit__, you rest well but only gain one bonus: Restore 1 health or Gain +2 focus."
+          miss:
+            text: "On a __miss__, you pick one of the following: You get hungrier and lose 1 blood, or you don't sleep well and lose 1 focus."
+
+      advance:
+        name: Advance
+        type: move
+        roll_type: no_roll
+        trigger:
+          text: When you focus on your skills, receive training, find inspiration, or earn a reward...
+        _source:
+          <<: *Source
+          page: 6
+        text: |-
+          When you focus on your skills, receive training, find inspiration, or earn a reward, you may spend:
+          - 3 XP to add a new asset, or
+          - 2 XP to upgrade an existing asset.
+          
+          The chosen asset must be framed within the fiction and make sense in the context. For example, if you’re by yourself without access to blood sorcery knowledge, you can’t learn or upgrade a ritual asset.
+
+      heal:
+        name: Heal
+        type: move
+        roll_type: action_roll
+        trigger:
+          text: When you spend a few seconds in place and use your supernatural abilities to heal yourself...
+          conditions:
+            - text: With your supernatural abilities to heal
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: force
+        _source:
+          <<: *Source
+          page: 7
+        text: |-
+          When you spend a few seconds in place and use your supernatural abilities to heal yourself, roll +force. 
+          - On a __strong hit__, the care is helpful. If you are wounded, clear the impact and take or give +2 health. Otherwise, take +3 health. Spend 1 blood.
+          - On a __weak hit__, as above, but the recovery costs extra time or resources. Choose one:
+            - Lose 2 focus and spend 1 blood.
+            - Spend 2 blood.
+          - On a __miss__, the aid is ineffective and the situation worsens. [Pay the Price](datasworn:move:elegy/suffer/pay_the_price).
+        outcomes:
+          strong_hit:
+            text: "On a __strong hit__, the care is helpful. Clear the impact and take or give +2 health. Otherwise, take +3 health. Spend 1 blood."
+          weak_hit:
+            text: "On a __weak hit__, the recovery costs extra time or resources. Choose one: Lose 2 focus and spend 1 blood, or spend 2 blood."
+          miss:
+            text: "On a __miss__, the aid is ineffective and the situation worsens. [Pay the Price](datasworn:move:elegy/suffer/pay_the_price)."
+
+      respite:
+        name: Respite
+        type: move
+        roll_type: action_roll
+        trigger:
+          text: When you socialize, share intimacy, or find a moment of peace...
+          conditions:
+            - text: Socialize, share intimacy, or find peace
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: heart
+        _source:
+          <<: *Source
+        page: 5
+        text: |-
+          When you socialize, share intimacy, or find a moment of peace, roll +heart.
+          - On a __strong hit__, you find companionship or comfort and your spirit is strengthened. If you are shaken, clear the impact and take +1 spirit. Otherwise, take +2 spirit.
+          - On a __weak hit__, as above, but this indulgence is fleeting. Envision an interruption, complication, or inner conflict. Then, lose 1 focus.
+          - On a __miss__, you take no comfort and the situation worsens. [Pay the Price](datasworn:move:elegy/suffer/pay_the_price).
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you find companionship or comfort and your spirit is strengthened. Clear the impact and take +1 spirit, or take +2 spirit if you're not shaken.
+          weak_hit:
+            text: On a __weak hit__, this indulgence is fleeting. Envision an interruption, complication, or inner conflict, and lose 1 focus.
+          miss:
+            text: On a __miss__, you take no comfort and the situation worsens. [Pay the Price](datasworn:move:elegy/suffer/pay_the_price).
+    
+      feed:
+        name: Feed
+        type: move
+        roll_type: action_roll
+        trigger:
+          text: When you attempt to drink blood from a living being...
+          conditions:
+            - text: Attempt to drink blood
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: force
+                  condition: If you act with brutality and physically overwhelm your struggling victim.
+                - using: stat
+                  stat: dexterity
+                  condition: If you act with speed or ambush an unsuspecting victim.
+                - using: stat
+                  stat: glamour
+                  condition: If you act with charm or seduce your victim.
+                - using: stat
+                  stat: heart
+                  condition: If you somehow manage to get your victim’s consent.
+        _source:
+          <<: *Source
+          page: 9
+        text: |-
+          When you attempt to drink blood from a living being, envision the scene. 
+          - If you act with brutality and physically overwhelm your struggling victim, roll +force.
+          - If you act with speed or ambush an unsuspecting victim, roll +dexterity.
+          - If you act with charm or seduce your victim, roll +glamour.
+          - If you somehow manage to get your victim’s consent, roll +heart.
+          - On a __strong hit__, gain 1 focus and choose one:
+            - Gain 2 blood and keep the victim alive
+            - Gain 4 blood and kill the victim, but lose 3 spirit
+          - On a __weak hit__, do the same as above, but lose 1 focus instead of gaining it.
+          - On a __miss__, you are unable to feed due to an adversity. [Pay the Price](datasworn:move:elegy/suffer/pay_the_price).
+        outcomes:
+          strong_hit:
+            text: |-
+              On a __strong hit__, gain 1 focus and choose one:
+              - Gain 2 blood and keep the victim alive
+              - Gain 4 blood and kill the victim, but lose 3 spirit
+          weak_hit:
+            text: On a __weak hit__, do the same as above, but lose 1 focus instead of gaining it.
+          miss:
+            text: On a __miss__, you are unable to feed due to an adversity. [Pay the Price](datasworn:move:elegy/suffer/pay_the_price).
+
+      ask_the_oracle:
+        name: Ask the Oracle
+        type: move
+        oracles:
+          almost_certain:
+            name: Almost Certain
+            <<: &AtO
+              oracle_type: column_text
+              type: oracle_rollable
+              match:
+                text: On a match, an extreme result or twist has occurred.
+            rows:
+              - roll: { min: 1, max: 10 }
+                text: 'No'
+              - roll: { min: 11, max: 100 }
+                text: 'Yes'
+          likely:
+            name: Likely
+            <<: *AtO
+            rows:
+              - roll: { min: 1, max: 25 }
+                text: 'No'
+              - roll: { min: 26, max: 100 }
+                text: 'Yes'
+          fifty_fifty:
+            name: 50/50
+            <<: *AtO
+            rows:
+              - roll: { min: 1, max: 50 }
+                text: 'No'
+              - roll: { min: 51, max: 100 }
+                text: 'Yes'
+          unlikely:
+            name: Unlikely
+            <<: *AtO
+            rows:
+              - roll: { min: 1, max: 75 }
+                text: 'No'
+              - roll: { min: 76, max: 100 }
+                text: 'Yes'
+          small_chance:
+            name: Small Chance
+            <<: *AtO
+            rows:
+              - roll: { min: 1, max: 90 }
+                text: 'No'
+              - roll: { min: 91, max: 100 }
+                text: 'Yes'
+        _source:
+          <<: *Source
+          page: 107
+        roll_type: no_roll
+        trigger:
+          text: When you seek to resolve questions, discover details in the world, determine how other characters respond, or trigger encounters or events...
+        text: |-
+          When __you seek to resolve questions, discover details in the world, determine how other characters respond, or trigger encounters or events__, you may...
+
+            * Draw a conclusion: Decide the answer based on the most interesting and obvious result.
+            * Ask a yes/no question: Decide the odds of a ‘yes’, and roll on the table below to check the answer.
+            * Pick two: Envision two options. Rate one as ‘likely’, and roll on the table below to see if it is true. If not, it is the other.
+            * Spark an idea: Brainstorm or use a random prompt.
+
+          Odds           | The answer is ‘yes’ if you roll...
+          ---------------|-----------------------------------
+          Almost Certain | 11 or greater
+          Likely         | 26 or greater
+          50/50          | 51 or greater
+          Unlikely       | 76 or greater
+          Small Chance   | 91 or greater
+
+          On a match, an extreme result or twist has occurred.
+
+  suffer:
+    name: Suffer Moves
+    type: move_category
+    _source:
+      <<: *Source
+      page: 11
+    summary:  When you face the outcome of a move, want to know what happens next, or have a question about people, places and events external to your character, the fate moves help you discover an answer.
+    contents:
+      pay_the_price:
+        name: Pay the Price
+        type: move
+        roll_type: no_roll
+        trigger:
+          text: When you suffer the outcome of an action...
+        _source:
+          <<: *Source
+          page: 7
+        text: |-
+          When you suffer the outcome of an action, choose one:
+          - Make the most obvious negative outcome happen.
+          - Ask the oracle for inspiration. Interpret the answer as a hardship or complication appropriate to the situation.
+          - Roll on the list below. If the result doesn’t fit the situation, roll again.
+         
+          {{table>move.oracle_rollable:elegy/suffer/pay_the_price.pay_the_price}}
+            
+        oracles:
+          pay_the_price:
+            name: Pay the Price Consequences
+            oracle_type: table_text
+            type: oracle_rollable
+            rows:
+              - roll: { min: 1, max: 2 }
+                text: 'A trusted individual or community acts against you.'
+              - roll: { min: 3, max: 4 }
+                text: 'An individual or community you care about is exposed to danger.'
+              - roll: { min: 5, max: 7 }
+                text: 'You encounter signs of a looming threat.'
+              - roll: { min: 8, max: 10 }
+                text: 'You create an opportunity for an enemy.'
+              - roll: { min: 11, max: 14 }
+                text: 'You face a tough choice.'
+              - roll: { min: 15, max: 18 }
+                text: 'You face the consequences of an earlier choice.'
+              - roll: { min: 19, max: 22 }
+                text: 'A surprising development complicates your quest.'
+              - roll: { min: 23, max: 26 }
+                text: 'You are separated from something or someone important.'
+              - roll: { min: 27, max: 32 }
+                text: 'Your action causes collateral damage or has an unintended effect.'
+              - roll: { min: 33, max: 38 }
+                text: 'Something of value is lost or destroyed.'
+              - roll: { min: 39, max: 44 }
+                text: 'The ambient introduces a new hazard.'
+              - roll: { min: 45, max: 50 }
+                text: 'A new enemy is revealed.'
+              - roll: { min: 51, max: 56 }
+                text: 'A friend or ally is in harm’s way (or you are, if alone).'
+              - roll: { min: 57, max: 62 }
+                text: 'Your supernatural abilities malfunction.'
+              - roll: { min: 63, max: 68 }
+                text: 'An asset is compromised.'
+              - roll: { min: 69, max: 74 }
+                text: 'You waste blood.'
+              - roll: { min: 75, max: 81 }
+                text: 'You are harmed.'
+              - roll: { min: 82, max: 88 }
+                text: 'You are stressed.'
+              - roll: { min: 89, max: 95 }
+                text: 'You are delayed or put at a disadvantage.'
+              - roll: { min: 96, max: 100 }
+                text: 'Roll twice.'
+
+      face_a_setback:
+        name: Face a Setback
+        type: move
+        roll_type: no_roll
+        trigger:
+          text: When your focus is at its minimum (-6), and you suffer additional -focus...
+        _source:
+          <<: *Source
+          page: 9
+        text: |-
+          When your focus is at its minimum (-6), and you suffer additional -focus, choose one:
+          - Exchange each additional -focus for any combination of -health, -spirit, or -blood as appropriate to the circumstances.
+          - Envision an event or discovery (ask the oracle if unsure) which undermines your progress in a current quest, journey, or fight. Then, for each additional -focus, clear 1 unit of progress on that track per its rank:
+            - Troublesome = clear 3 progress
+            - Dangerous = clear 2 progress
+            - Formidable = clear 1 progress
+            - Extreme = clear 2 ticks
+            - Epic = clear 1 tick
+      
+      endure_harm:
+        name: Endure Harm
+        type: move
+        roll_type: action_roll
+        trigger:
+          text: When you face physical damage ...
+          conditions:
+            - method: player_choice
+              roll_options:
+                - using: stat
+                  stat: force
+        _source:
+          <<: *Source
+          page: 9
+        text: |-
+          When you face physical damage, suffer -health equal to your foe’s rank or as appropriate to the situation. If your health is 0, suffer -focus equal to any remaining -health. Then, roll +Force.
+          
+          - On a __strong hit__, choose one:
+            - Shake it off: If your health is greater than 0, suffer -1 focus in exchange for +1 health.
+            - Embrace the pain: Take +1 focus.
+          
+          - On a __weak hit__, you press on.
+          
+          - On a __miss__, also suffer -1 focus. If you are at 0 health, you must mark wounded or permanently harmed (if currently unmarked) or roll on the following table:
+            
+            {{table>move.oracle_rollable:elegy/suffer/endure_harm.endure_harm}}
+
+        outcomes:
+          strong_hit:
+            text: |-
+              On a __strong hit__, choose one:
+              - Shake it off: If your health is greater than 0, suffer -1 focus in exchange for +1 health.
+              - Embrace the pain: Take +1 focus.
+          weak_hit:
+            text: On a __weak hit__, you press on.
+          miss:
+            text: On a __miss__, also suffer -1 focus. If you are at 0 health, you must mark wounded or permanently harmed (if currently unmarked) or roll on the list below.
+        oracles:
+          endure_harm:
+            name: Endure Harm Consequences
+            oracle_type: table_text
+            type: oracle_rollable
+            rows:
+              - roll: { min: 1, max: 10 }
+                text: 'The harm is mortal. [Face Last Death](datasworn:move:elegy/suffer/face_last_death).'
+              - roll: { min: 11, max: 25 }
+                text: 'You are on the brink of your last death. You need to Heal within an hour or two, or [Face Last Death](datasworn:move:elegy/suffer/face_last_death).'
+              - roll: { min: 26, max: 50 }
+                text: 'You are unconscious and out of action. If left alone, you come back to your senses in an hour or two. If you are vulnerable to a foe not inclined to show mercy, [Face Last Death](datasworn:move:elegy/suffer/face_last_death).'
+              - roll: { min: 51, max: 100 }
+                text: 'You are battered but still standing.'
+
+      face_last_death:
+        name: Face Last Death
+        type: move
+        roll_type: action_roll
+        trigger:
+          text: When you are brought to the brink of your annihilation, and glimpse the world beyond ...
+          conditions:
+          - text: roll +Heart
+            method: player_choice
+            roll_options:
+              - using: stat
+                stat: heart
+        _source:
+          <<: *Source
+          page: 10
+        text: |-
+          When you are brought to the brink of your annihilation, and glimpse the world beyond, roll +Heart.
+          
+          - On a __strong hit__, you are cast back into the mortal world.
+          
+          - On a __weak hit__, choose one:
+            - You die, but not before making a noble sacrifice. Envision your final moments.
+            - Death desires something of you in exchange for your unlife. Envision what it wants (ask the oracle if unsure), and Sing an Elegy (formidable or extreme) to complete that quest. If you fail to score a hit when you Sing an Elegy, or refuse the quest, you are dead. Otherwise, you return to the mortal world and are now cursed. You may only clear the cursed debility by completing the quest.
+          
+          - On a __miss__, you are destroyed.
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you are cast back into the mortal world.
+          weak_hit:
+            text: |-
+              On a __weak hit__, choose one:
+              - You die, but not before making a noble sacrifice. Envision your final moments.
+              - Death desires something of you in exchange for your unlife. Envision what it wants (ask the oracle if unsure), and Sing an Elegy (formidable or extreme) to complete that quest. If you fail to score a hit when you Sing an Elegy, or refuse the quest, you are dead. Otherwise, you return to the mortal world and are now cursed. You may only clear the cursed debility by completing the quest.
+          miss:
+            text: On a __miss__, you are destroyed.
+      
+
+      endure_hunger:
+        name: Endure Hunger
+        type: move
+        roll_type: action_roll
+        trigger:
+          text: When you use supernatural powers or spend blood as a result of the [Pay the Price](datasworn:move:elegy/suffer/pay_the_price) move ...
+          conditions:
+            - method: player_choice
+              roll_options:
+                - using: stat
+                  stat: intellect
+        _source:
+          <<: *Source
+          page: 9
+        text: |-
+          When you use supernatural powers or spend blood as a result of the [Pay the Price](datasworn:move:elegy/suffer/pay_the_price) move, suffer -blood as appropriate to the situation. If your blood is 0, suffer -focus equal to any remaining -focus. Then, roll +Intellect.
+
+          - On a __strong hit__, choose one:
+            - Shake it off: If your blood is greater than 0, suffer -1 focus in exchange for +1 blood.
+            - Embrace the monster within: Take +1 focus.
+
+          - On a __weak hit__, you press on.
+
+          - On a __miss__, also suffer -1 focus. If you are at 0 blood, you must mark starving or sinner (if currently unmarked) or roll on the following table:
+            
+            {{table>move.oracle_rollable:elegy/suffer/endure_hunger.endure_hunger}}
+
+        outcomes:
+          strong_hit:
+            text: |-
+              On a __strong hit__, choose one:
+              - Shake it off: If your blood is greater than 0, suffer -1 focus in exchange for +1 blood.
+              - Embrace the monster within: Take +1 focus.
+          weak_hit:
+            text: On a __weak hit__, you press on.
+          miss:
+            text: On a __miss__, also suffer -1 focus. If you are at 0 blood, you must mark starving or sinner (if currently unmarked) or roll on the list below.
+        oracles:
+          endure_hunger:
+            name: Endure Hunger Consequences
+            oracle_type: table_text
+            type: oracle_rollable
+            rows:
+              - roll: { min: 1, max: 10 }
+                text: 'Your hunger consumes you. [Face Starvation](datasworn:move:elegy/suffer/face_starvation).'
+              - roll: { min: 11, max: 25 }
+                text: 'You are on the brink of starvation. You need to Feed within an hour or two, or [Face Last Death](datasworn:move:elegy/suffer/face_last_death).'
+              - roll: { min: 26, max: 50 }
+                text: 'You are unconscious and out of action. If left alone, you come back to your senses in an hour or two. If you are vulnerable to a foe not inclined to show mercy, [Face Last Death](datasworn:move:elegy/suffer/face_last_death).'
+              - roll: { min: 51, max: 100 }
+                text: 'You persevere.'
+
+      face_starvation:
+        name: Face Starvation
+        type: move
+        roll_type: action_roll
+        trigger:
+          text: When you are brought to the brink of starvation ...
+          conditions:
+            - text: roll +Intellect
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: intellect
+        _source:
+          <<: *Source
+          page: 10
+        text: |-
+          When you are brought to the brink of starvation, roll +Intellect.
+          
+          - On a __strong hit__, you resist and press on.
+          
+          - On a __weak hit__, choose one:
+            - Your humanity is devoured, but not before remembering a moment of your mortal life. Envision what flashes behind your eyes.
+            - You get so frenzied, you commit something that angers your ruler. Envision what it is. She’ll ask something in return for letting you live. When she does, envision the frightening encounter and Sing an Elegy to her (formidable or extreme).
+          
+          - On a __miss__, your hunger destroys your humanity and...
+
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you resist and press on.
+          weak_hit:
+            text: |-
+              On a __weak hit__, choose one:
+              - Your humanity is devoured, but not before remembering a moment of your mortal life. Envision what flashes behind your eyes.
+              - You get so frenzied, you commit something that angers your ruler. Envision what it is. She’ll ask something in return for letting you live. When she does, envision the frightening encounter and Sing an Elegy to her (formidable or extreme).
+          miss:
+            text: On a __miss__, your hunger destroys your humanity and...
+      
+      endure_stress:
+        name: Endure Stress
+        type: move
+        roll_type: action_roll
+        trigger:
+          text: When you face mental shock or despair ...
+          conditions:
+            - method: player_choice
+              roll_options:
+                - using: stat
+                  stat: heart
+        _source:
+          <<: *Source
+          page: 9
+        text: |-
+          When you face mental shock or despair, suffer -spirit equal to your foe’s rank or as appropriate to the situation (see Stress). If your spirit is 0, suffer -focus equal to any remaining -spirit. Then, roll +Heart.
+          
+          - On a __strong hit__, choose one:
+            - Shake it off: If your spirit is greater than 0, suffer -1 focus in exchange for +1 spirit.
+            - Embrace the darkness: Take +1 focus.
+          
+          - On a __weak hit__, you press on.
+          
+          - On a __miss__, also suffer -1 focus. If you are at 0 spirit, you must mark shaken or corrupted (if currently unmarked) or roll on the following table:
+
+          {{table>move.oracle_rollable:elegy/suffer/endure_stress.endure_stress}}
+
+        outcomes:
+          strong_hit:
+            text: |-
+              On a __strong hit__, choose one:
+              - Shake it off: If your spirit is greater than 0, suffer -1 focus in exchange for +1 spirit.
+              - Embrace the darkness: Take +1 focus.
+          weak_hit:
+            text: On a __weak hit__, you press on.
+          miss:
+            text: |-
+              On a __miss__, also suffer -1 focus. If you are at 0 spirit, you must mark shaken or corrupted (if currently unmarked) or roll on the list below.
+        oracles:
+          endure_stress:
+            name: Endure Stress Consequences
+            oracle_type: table_text
+            type: oracle_rollable
+            rows:
+              - roll: { min: 1, max: 10 }
+                text: 'You are overwhelmed. [Face Desolation](datasworn:move:elegy/suffer/face_desolation).'
+              - roll: { min: 11, max: 25 }
+                text: 'You give up. Forsake Your Elegy (if possible, one relevant to your current crisis).'
+              - roll: { min: 26, max: 50 }
+                text: 'You are unconscious and out of action. If left alone, you come back to your senses in an hour or two. If you are vulnerable to a foe not inclined to show mercy, [Face Last Death](datasworn:move:elegy/suffer/face_last_death).'
+              - roll: { min: 51, max: 100 }
+                text: 'You persevere.'
+
+      face_desolation:
+        name: Face Desolation
+        type: move
+        roll_type: action_roll
+        trigger:
+          text: When you are brought to the brink of desolation...
+          conditions:
+            - method: player_choice
+              roll_options:
+                - using: stat
+                  stat: heart
+        _source:
+          <<: *Source
+          page: 10
+        text: |-
+          When you are brought to the brink of desolation, roll +Heart.
+
+          - On a __strong hit__, you resist and press on.
+
+          - On a __weak hit__, choose one:
+            - Your spirit or sanity breaks, but not before you make a noble sacrifice. Envision your final moments.
+            - You see a vision of a dreaded event coming to pass. Envision that dark future, and Sing an Elegy (formidable or extreme) to prevent it. If you fail to score a hit when you Sing an Elegy, or refuse the quest, you are lost. Otherwise, you return to your senses and are now tormented. You may only clear the tormented debility by completing the quest.
+
+          - On a __miss__, you succumb to despair or horror and are lost.
+          
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you resist and press on.
+          weak_hit:
+            text: |-
+              On a __weak hit__, choose one:
+              - Your spirit or sanity breaks, but not before you make a noble sacrifice. Envision your final moments.
+              - You see a vision of a dreaded event coming to pass. Envision that dark future, and Sing an Elegy (formidable or extreme) to prevent it. If you fail to score a hit when you Sing an Elegy, or refuse the quest, you are lost. Otherwise, you return to your senses and are now tormented. You may only clear the tormented debility by completing the quest.
+          miss:
+            text: On a __miss__, you succumb to despair or horror and are lost.
+  connection:
+    name: Connection Moves
+    type: move_category
+    _source:
+      <<: *Source
+      page: 11
+    summary:  When you interact with other characters ...
+    contents:
+      make_connection:
+        name: Make a Connection
+        type: move
+        roll_type: action_roll
+        trigger:
+          text: When you search out a new relationship or give focus to an existing relationship (not an ally or companion)...
+          conditions:
+            - method: player_choice
+              roll_options:
+                - using: stat
+                  stat: heart
+        _source:
+          <<: *Source
+          page: 10
+        text: |-
+          When you search out a new relationship or give focus to an existing relationship (not an ally or companion), roll +Heart.
+
+          - On a __strong hit__, you create a connection. Give them a role and rank. Whenever your connection aids you on a move closely associated with their role, add +1 and take +1 focus on a hit.
+
+          - On a __weak hit__, as above, but this connection comes with a complication or cost. Envision what they reveal or demand.
+
+          - On a __miss__, you don’t make a connection and the situation worsens. [Pay the Price](datasworn:move:elegy/suffer/pay_the_price)..
+
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you create a connection. Give them a role and rank. Whenever your connection aids you on a move closely associated with their role, add +1 and take +1 focus on a hit.
+          weak_hit:
+            text: On a __weak hit__, as above, but this connection comes with a complication or cost. Envision what they reveal or demand.
+          miss:
+            text: On a __miss__, you don’t make a connection and the situation worsens. [Pay the Price](datasworn:move:elegy/suffer/pay_the_price)..
+      develop_relationship:
+        name: Develop a Relationship
+        type: move
+        roll_type: no_roll
+        trigger:
+          text: When a relationship with a connection is reinforced by...
+        _source:
+          <<: *Source
+          page: 10
+        text: |-
+          When a relationship with a connection is reinforced by...
+          - accomplishing a mission that benefits them
+          - seeking their assistance during dire situations
+          - presenting them with a valuable gift
+          - sharing a significant moment
+          - standing by them in times of hardship
+          - successfully navigating a test of your relationship
+          ...mark progress according to the rank of the connection.
+      test_your_relationship:
+        name: Test Your Relationship
+        type: move
+        roll_type: action_roll
+        trigger:
+          text: When your relationship with a connection is tested through conflict, betrayal, or circumstance...
+          conditions:
+            - method: player_choice
+              roll_options:
+                - using: stat
+                  stat: heart
+        _source:
+          <<: *Source
+          page: 11
+        text: |-
+          When your relationship with a connection is tested through conflict, betrayal, or circumstance, roll +Heart. If you share a bond, add +1.
+
+          - On a __strong hit__, mark progress.
+          - On a __weak hit__, mark progress, but also envision a demand or complication as a fallout of this test.
+          - On a __miss__, or if you have no interest in maintaining this relationship, choose one:
+            - Lose the connection: Envision how this impacts you and [Pay the Price](datasworn:move:elegy/suffer/pay_the_price).
+            - Prove your loyalty: Envision what you offer or what they demand, and Sing an Elegy (formidable or greater) to see it done. Until you finish it, take no benefit for the connection. If you refuse or fail, the connection is permanently undone.
+
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, mark progress. Your bond is strengthened, and the relationship endures.
+          weak_hit:
+            text: On a __weak hit__, mark progress, but envision a complication or demand that arises as a result of this test. The relationship is strained or has a cost.
+          miss:
+            text: "On a __miss__, or if you have no interest in maintaining the relationship, choose one: \n - Lose the connection: Envision how this impacts you and [Pay the Price](datasworn:move:elegy/suffer/pay_the_price). \n - Prove your loyalty: Envision what you offer or what they demand, and Sing an Elegy (formidable or greater) to see it done. Until you finish it, take no benefit for the connection. If you refuse or fail, the connection is permanently undone."
+      form_a_bond:
+        name: Form a Bond
+        type: move
+        roll_type: progress_roll
+        tracks:
+          category: Connection
+        trigger:
+          text: When your relationship with a connection is ready to evolve...
+          conditions:
+            - roll_options:
+                - using: progress_track     
+        _source:
+          <<: *Source
+          page: 12
+        text: |-
+          When your connection with someone is ready to evolve, roll the challenge dice and compare the result with your progress.
+
+          - On a __strong hit__, a bond is established. Earn XP based on the connection’s rank:
+            - Troublesome = 1 tick
+            - Dangerous = 2 ticks
+            - Formidable = 1 box
+            - Extreme = 2 boxes
+            - Epic = 3 boxes
+
+            This reward extends to all allies tied to this connection. When a character you’re bonded to supports you in a move closely related to their role, add +2 instead of +1, and take +1 focus.
+
+          - On a __weak hit__, follow the same steps as above, but your connection seeks something more first. To form the bond and earn the XP reward, envision the request and fulfill it (or Sing an Elegy to guarantee its completion).
+
+          - On a __miss__, they reveal a motivation or background that introduces tension. If you decide to maintain this relationship, roll both challenge dice, take the lower value, and clear that number of progress boxes. Then, increase the connection’s rank by one (if not already epic).
+
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, a bond is established. Earn XP based on the connection's rank. This reward extends to all allies tied to this connection. When bonded allies support you in a move related to their role, add +2 instead of +1, and take +1 focus.
+          weak_hit:
+            text: On a __weak hit__, follow the same steps as above, but your connection seeks something more first. Envision what they request and fulfill it, or Sing an Elegy to guarantee its completion.
+          miss:
+            text: On a __miss__, the connection reveals a motivation or background that introduces tension. If you wish to continue the relationship, roll both challenge dice, take the lower value, and clear that number of progress boxes. Then, increase the connection’s rank by one (if not already epic).
+
+  quest:
+    name: Quest Moves
+    type: move_category
+    _source:
+      <<: *Source
+      page: 11
+    summary:  When you swear or complete quests / elegies ...
+    contents:
+      sing_an_elegy:
+        name: Sing an Elegy
+        type: move
+        roll_type: action_roll
+        trigger:
+          text: When you swear to complete a quest ...
+          conditions:
+          - method: player_choice
+            roll_options:
+              - using: stat
+                stat: heart
+        _source:
+          <<: *Source
+          page: 15
+        text: |-
+          When you swear to complete a quest, write your elegy and give it a rank. Then, roll +Heart. If you make this promise to a connection, add +1; if you share a bond, add +2.
+
+          - On a __strong hit__, you are emboldened, and it is clear what you must do next. Take +2 focus.
+          
+          - On a __weak hit__, you are determined but begin your quest with more questions than answers. Take +1 focus, and envision what you do to find a path forward.
+          
+          - On a __miss__, you must overcome a significant obstacle before you begin your quest. Envision what stands in your way.
+
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you are emboldened, and it is clear what you must do next. Take +2 focus.
+          weak_hit:
+            text: On a __weak hit__, you are determined but begin your quest with more questions than answers. Take +1 focus, and envision what you do to find a path forward.
+          miss:
+            text: On a __miss__, you must overcome a significant obstacle before you begin your quest. Envision what stands in your way.
+
+      reach_a_milestone:
+        name: Reach a Milestone
+        type: move
+        roll_type: no_roll
+        trigger:
+          text: When you make significant progress in your quest ...
+        _source:
+          <<: *Source
+          page: 16
+        text: |-
+          When you make significant progress in your quest by overcoming a critical obstacle, solving a complex mystery, defeating a powerful threat, gaining vital support, or acquiring a crucial item, you may mark progress.
+
+          - __Troublesome quest__: Mark 3 boxes.
+          - __Dangerous quest__: Mark 2 boxes.
+          - __Formidable quest__: Mark 1 box.
+          - __Extreme quest__: Mark 2 ticks.
+          - __Epic quest__: Mark 1 tick.
+
+      fulfill_your_elegy:
+          name: Fulfill Your Elegy
+          roll_type: progress_roll
+          type: move
+          tracks:
+            category: Quest
+          trigger:
+            text: When you achieve what you believe to be the fulfillment of your promise...
+            conditions:
+              - roll_options:
+                  - using: progress_track
+          text: |-
+            __When you achieve what you believe to be the fulfillment of your promise__, roll the challenge dice and compare to your progress.
+
+            On a __strong hit__, your quest is complete. Mark a reward on your quest's legacy track per the quest's rank:
+              - Troublesome: 1 tick
+              - Dangerous: 2 ticks
+              - Formidable: 1 box
+              - Extreme: 2 boxes
+              - Epic: 3 boxes.
+            Any allies who shared this vow also mark the reward.
+
+            On a __weak hit__, as above, but there is more to be done or you realize the truth of your quest. Envision what you discover (ask the oracle if unsure). If you [Sing an Elegy](datasworn:move:elegy/quest/sing_an_elegy) to set things right, take your full legacy reward. Otherwise, mark the reward one rank lower.
+
+            On a __miss__, your quest is undone through an unexpected complication or realization. Envision what happens and choose one:
+              * Give up on the quest: [Forsake Your Elegy](datasworn:move:elegy/quest/forsake_your_elegy).
+              * Recommit to the quest: Roll both challenge dice, take the lowest value, and clear that number of progress boxes. Then, raise the quest's rank by one (if not already epic).
+          outcomes:
+            strong_hit:
+              text: |-
+                On a __strong hit__, your quest is complete. Mark a reward on your quest's legacy track per the quest's rank:
+                  - Troublesome: 1 tick
+                  - Dangerous: 2 ticks
+                  - Formidable: 1 box
+                  - Extreme: 2 boxes
+                  - Epic: 3 boxes.
+                Any allies who shared this vow also mark the reward.
+            weak_hit:
+              text: |-
+                On a __weak hit__, your quest is fulfilled, but there is more to be done or you realize the truth of your quest. If you [Sing an Elegy](datasworn:move:elegy/quest/sing_an_elegy) to set things right, take your full legacy reward per the quest's rank. Otherwise, make the reward one rank lower. Any allies who shared this vow also mark the reward.
+            miss:
+              text: |-
+                On a __miss__, your quest is undone through an unexpected complication or realization. Envision what happens and choose one:
+                  * Give up on the quest: [Forsake Your Elegy](datasworn:move:elegy/quest/forsake_your_elegy).
+                  * Recommit to the quest: Roll both challenge dice, take the lowest value, and clear that number of progress boxes. Then, raise the quest's rank by one (if not already epic).
+          _source:
+            <<: *Source
+            page: 17
+
+      forsake_your_elegy:
+          name: Forsake Your Elegy
+          roll_type: no_roll
+          type: move
+          trigger:
+            text: When you renounce your quest, betray your promise, or the goal is lost to you...
+          text: |-
+            __When you renounce your quest, betray your promise, or the goal is lost to you__, clear the elegy.
+
+            Then, envision the impact of this failure and choose one or more as appropriate to the nature of the elegy. Any allies who shared this vow may also envision a cost.
+
+              * You are demoralized or dispirited: [Endure Stress](datasworn:move:elegy/suffer/endure_stress).
+              * A connection loses faith: [Test Your Relationship](datasworn:move:elegy/connection/test_your_relationship) when you next interact.
+              * Your supernatural abilities weaken drastically: Discard a power asset.
+              * You must abandon a path or resource: Discard an asset (not a power or nature one).
+              * Someone else pays a price: Envision how a person, being, or community bears the cost of the failure.
+              * Someone else takes advantage: Envision how an enemy gains power.
+              * Your reputation suffers: Envision how this failure marks you.
+          _source:
+            <<: *Source
+            page: 160
+
+  combat:
+    name: Combat Moves
+    type: move_category
+    _source:
+      <<: *Source
+      page: 7
+    summary:  When you face an enemy in combat ...
+    contents: 
+      enter_the_fray:
+        name: Enter the Fray
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you initiate combat or are forced into a fight...
+          conditions:
+            - method: player_choice
+              roll_options:
+                - using: stat
+                  stat: heart
+                - using: stat
+                  stat: force
+                - using: stat
+                  stat: dexterity
+                - using: stat
+                  stat: intellect
+        text: |-
+          __When you initiate combat or are forced into a fight__, envision your objective and give it a rank. If the combat includes discrete challenges or phases, set an objective with a rank for each.
+
+          Then, roll to see if you are in control. If you are:
+          
+          * Facing off against your foe: Roll +Heart
+          * In the thick of it at close quarters: Roll +Force
+          * On the move or preparing to act against an unaware foe: Roll +Dexterity
+          * Caught in a trap or sizing up the situation: Roll +Intellect
+
+          - On a __strong hit__, take +2 focus.
+          - On a __weak hit__, take +1 focus.
+          - On a __miss__, the fight begins with you at a disadvantage. Lose 1 focus.
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, take +2 focus.
+          weak_hit:
+            text: On a __weak hit__, take +1 focus.
+          miss:
+            text: On a __miss__, the fight begins with you at a disadvantage. Lose 1 focus.
+        _source:
+          <<: *Source
+          page: 7
+      
+      clash:
+        name: Clash
+        roll_type: action_roll
+        type: move
+        trigger:
+          text: When you fight against a foe at close quarters or exchange fire at a distance...
+          conditions:
+            - method: player_choice
+              roll_options:
+                - using: stat
+                  stat: force
+                - using: stat
+                  stat: dexterity
+        text: |-
+          __When you fight against a foe at close quarters or exchange fire at a distance__, roll +Force if you are in close combat, or roll +Dexterity if you are exchanging fire.
+
+          - On a __strong hit__, mark progress twice. You overwhelm your foe.
+          - On a __weak hit__, mark progress, but you are dealt a counterblow or setback. Pay the Price.
+          - On a __miss__, your foe dominates this exchange. Pay the Price.
+
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, mark progress twice. You overwhelm your foe.
+          weak_hit:
+            text: On a __weak hit__, mark progress, but you are dealt a counterblow or setback. Pay the Price.
+          miss:
+            text: On a __miss__, your foe dominates this exchange. Pay the Price.
+        _source:
+          <<: *Source
+          page: 8
+      end_the_fight:
+          name: End the Fight
+          roll_type: progress_roll
+          type: move
+          tracks:
+            category: Combat
+          trigger:
+            text: When you take decisive action to end the fight...
+            conditions:
+              - roll_options:
+                  - using: progress_track
+          text: |-
+            __When you take decisive action to end the fight__, roll the challenge dice and compare to your progress. Focus is ignored on this roll.
+
+            On a __strong hit__, this foe is no longer in the fight. They are killed, out of action, flee, or surrender as appropriate to the situation and your intent.
+
+            On a __weak hit__, as above, but you must also choose one:
+              * It’s worse than you thought: [Endure Harm](datasworn:move:starforged/suffer/endure_harm).
+              * You are overcome: [Endure Stress](datasworn:move:starforged/suffer/endure_stress).
+              * Your victory is short-lived: A new danger or foe appears, or an existing danger worsens.
+              * You suffer collateral damage: Something of value is lost or broken, or someone important must pay the cost.
+              * You’ll pay for it: An objective falls out of reach.
+              * Others won’t forget: You are marked for vengeance.
+
+            On a __miss__, you have lost this fight. [Pay the Price](datasworn:move:starforged/fate/pay_the_price).
+          outcomes:
+            strong_hit:
+              text: On a __strong hit__, this foe is no longer in the fight. They are killed, out of action, flee, or surrender as appropriate to the situation and your intent.
+            weak_hit:
+              text: |-
+                On a __weak hit__, as above, but you must also choose one:
+                    * It’s worse than you thought: [Endure Harm](datasworn:move:elegy/suffer/endure_harm).
+                    * You are overcome: [Endure Stress](datasworn:move:elegy/suffer/endure_stress).
+                    * Your victory is short-lived: A new danger or foe appears, or an existing danger worsens.
+                    * You suffer collateral damage: Something of value is lost or broken, or someone important must pay the cost.
+                    * You’ll pay for it: An objective falls out of reach.
+                    * Others won’t forget: You are marked for vengeance.
+            miss:
+              text: On a __miss__, you have lost this fight. [Pay the Price](datasworn:move:starforged/fate/pay_the_price).
+          _source:
+            <<: *Source
+            page: 8
+
+      battle:
+        name: Battle
+        type: move
+        roll_type: action_roll
+        trigger:
+          text: When you fight a battle, and it happens in a blur, and you...
+          conditions:
+            - text: Fight at range, or using your speed and the terrain to your advantage
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: dexterity
+            - text: Fight depending on your courage, allies, or companions
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: heart
+            - text: Fight in close to overpower your opponents
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: force
+            - text: Fight using trickery to befuddle your opponents
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: dexterity
+            - text: Fight using careful tactics to outsmart your opponents
+              method: player_choice
+              roll_options:
+                - using: stat
+                  stat: intellect
+        _source:
+          <<: *Source
+          page: 8
+        text: |-
+          When __you fight a battle, and it happens in a blur__, envision your objective and roll. If you primarily...
+
+            * Fight at range, or using your speed and the terrain to your advantage: Roll +dexterity.
+            * Fight depending on your courage, allies, or companions: Roll +heart.
+            * Fight in close to overpower your opponents: Roll +force.
+            * Fight using trickery to befuddle your opponents: Roll +dexterity.
+            * Fight using careful tactics to outsmart your opponents: Roll +intellect.
+
+          On a __strong hit__, you achieve your objective unconditionally. Take +2 momentum.
+
+          On a __weak hit__, you achieve your objective, but not without cost. [Pay the Price](datasworn:move:elegy/suffer/pay_the_price).
+
+          On a __miss__, you are defeated and the objective is lost to you. [Pay the Price](datasworn:move:elegy/suffer/pay_the_price).
+        outcomes:
+          strong_hit:
+            text: On a __strong hit__, you achieve your objective unconditionally. Take +2 momentum.
+          weak_hit:
+            text: On a __weak hit__, you achieve your objective, but not without cost. [Pay the Price](datasworn:move:elegy/suffer/pay_the_price).
+          miss:
+            text: On a __miss__, you are defeated and the objective is lost to you. [Pay the Price](datasworn:move:elegy/suffer/pay_the_price).

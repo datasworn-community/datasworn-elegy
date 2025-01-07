@@ -1,0 +1,339 @@
+_id: elegy
+datasworn_version: "0.1.0"
+type: ruleset
+oracles:
+  character:
+    name: Character Oracles
+    type: oracle_collection
+    oracle_type: tables
+    _source:
+      <<: &Source
+          title: 'Elegy 3.5'
+          license: https://creativecommons.org/licenses/by-nc-sa/4.0
+          url: https://miraclem.itch.io/elegy
+          date: 2024-07-31
+          authors:
+            - name: moro de oliveira
+    contents:
+      traits:
+        name: Trait
+        type: oracle_rollable
+        oracle_type: table_text
+        canonical_name: 'Trait Table'
+        summary: Use this oracle to determine a character's trait.
+        dice: 1d100
+        _source:
+          <<: *Source
+        rows:
+          - roll: { min: 1, max: 2 }
+            text: Addicted
+          - roll: { min: 3, max: 4 }
+            text: Cruel
+          - roll: { min: 5, max: 6 }
+            text: Infamous
+          - roll: { min: 7, max: 8 }
+            text: Resourceful
+          - roll: { min: 9, max: 10 }
+            text: Adventurous
+          - roll: { min: 11, max: 12 }
+            text: Cunning
+          - roll: { min: 13, max: 14 }
+            text: Influential
+          - roll: { min: 15, max: 16 }
+            text: Secretive
+          - roll: { min: 17, max: 18 }
+            text: Afflicted
+          - roll: { min: 19, max: 20 }
+            text: Dangerous
+          - roll: { min: 21, max: 22 }
+            text: Insensitive
+          - roll: { min: 23, max: 24 }
+            text: Selfish
+          - roll: { min: 25, max: 26 }
+            text: Aggressive
+          - roll: { min: 27, max: 28 }
+            text: Deceitful
+          - roll: { min: 29, max: 30 }
+            text: Insightful
+          - roll: { min: 31, max: 32 }
+            text: Sociable
+          - roll: { min: 33, max: 34 }
+            text: Ambitious
+          - roll: { min: 35, max: 36 }
+            text: Defiant
+          - roll: { min: 37, max: 38 }
+            text: Intelligent
+          - roll: { min: 39, max: 40 }
+            text: Angry
+          - roll: { min: 41, max: 42 }
+            text: Determined
+          - roll: { min: 43, max: 44 }
+            text: Intolerant
+          - roll: { min: 45, max: 46 }
+            text: Stern
+          - roll: { min: 47, max: 48 }
+            text: Anxious
+          - roll: { min: 49, max: 50 }
+            text: Stingy
+          - roll: { min: 51, max: 52 }
+            text: Apathetic
+          - roll: { min: 53, max: 54 }
+            text: Doomed
+          - roll: { min: 55, max: 56 }
+            text: Kind
+          - roll: { min: 57, max: 58 }
+            text: Stoic
+          - roll: { min: 59, max: 60 }
+            text: Bitter
+          - roll: { min: 61, max: 62 }
+            text: Driven
+          - roll: { min: 63, max: 64 }
+            text: Strong
+          - roll: { min: 65, max: 66 }
+            text: Boastful
+          - roll: { min: 67, max: 68 }
+            text: Lonely
+          - roll: { min: 69, max: 70 }
+            text: Stubborn
+          - roll: { min: 71, max: 72 }
+            text: Envious
+          - roll: { min: 73, max: 74 }
+            text: Loving
+          - roll: { min: 75, max: 76 }
+            text: Successful
+          - roll: { min: 77, max: 78 }
+            text: Bold
+          - roll: { min: 79, max: 80 }
+            text: Experienced
+          - roll: { min: 81, max: 82 }
+            text: Loyal
+          - roll: { min: 83, max: 84 }
+            text: Suspicious
+          - roll: { min: 85, max: 86 }
+            text: Brave
+          - roll: { min: 87, max: 88 }
+            text: Faithful
+          - roll: { min: 89, max: 90 }
+            text: Manipulative
+          - roll: { min: 91, max: 92 }
+            text: Talented
+          - roll: { min: 93, max: 94 }
+            text: Careless
+          - roll: { min: 95, max: 96 }
+            text: Generous
+          - roll: { min: 97, max: 98 }
+            text: Oblivious
+          - roll: { min: 99, max: 100 }
+            text: Cautious
+
+      occupation:
+        name: Occupation
+        type: oracle_rollable
+        oracle_type: table_text
+        canonical_name: 'Occupation Table'
+        summary: Use this oracle to determine a character's occupation.
+        dice: 1d100
+        _source:
+          <<: *Source
+        rows:
+          - roll: { min: 1, max: 2 }
+            text: Police
+          - roll: { min: 3, max: 4 }
+            text: Doctor
+          - roll: { min: 5, max: 6 }
+            text: Lawyer
+          - roll: { min: 7, max: 8 }
+            text: Nurse
+          - roll: { min: 9, max: 10 }
+            text: Chef
+          - roll: { min: 11, max: 12 }
+            text: Mechanic
+          - roll: { min: 13, max: 14 }
+            text: Artist
+          - roll: { min: 15, max: 16 }
+            text: Teacher
+          - roll: { min: 17, max: 18 }
+            text: Librarian
+          - roll: { min: 19, max: 20 }
+            text: Actor
+          - roll: { min: 21, max: 22 }
+            text: Journalist
+          - roll: { min: 23, max: 24 }
+            text: Scientist
+          - roll: { min: 25, max: 26 }
+            text: Pharmacist
+          - roll: { min: 27, max: 28 }
+            text: Waiter
+          - roll: { min: 29, max: 30 }
+            text: Tailor
+          - roll: { min: 31, max: 32 }
+            text: Musician
+          - roll: { min: 33, max: 34 }
+            text: Carpenter
+          - roll: { min: 35, max: 36 }
+            text: Photographer
+          - roll: { min: 37, max: 38 }
+            text: Firefighter
+          - roll: { min: 39, max: 40 }
+            text: Farmer
+          - roll: { min: 41, max: 42 }
+            text: Plumber
+          - roll: { min: 43, max: 44 }
+            text: Detective
+          - roll: { min: 45, max: 46 }
+            text: Salesperson
+          - roll: { min: 47, max: 48 }
+            text: Athlete
+          - roll: { min: 49, max: 50 }
+            text: Banker
+          - roll: { min: 51, max: 52 }
+            text: Pilot
+          - roll: { min: 53, max: 54 }
+            text: Security
+          - roll: { min: 55, max: 56 }
+            text: Driver
+          - roll: { min: 57, max: 58 }
+            text: Writer
+          - roll: { min: 59, max: 60 }
+            text: Stylist
+          - roll: { min: 61, max: 62 }
+            text: Florist
+          - roll: { min: 63, max: 64 }
+            text: Realtor
+          - roll: { min: 65, max: 66 }
+            text: Veterinarian
+          - roll: { min: 67, max: 68 }
+            text: Counselor
+          - roll: { min: 69, max: 70 }
+            text: Dancer
+          - roll: { min: 71, max: 72 }
+            text: Barber
+          - roll: { min: 73, max: 74 }
+            text: Therapist
+          - roll: { min: 75, max: 76 }
+            text: Taxi Driver
+          - roll: { min: 77, max: 78 }
+            text: Barista
+          - roll: { min: 79, max: 80 }
+            text: Reception
+          - roll: { min: 81, max: 82 }
+            text: Builder
+          - roll: { min: 83, max: 84 }
+            text: Developer
+          - roll: { min: 85, max: 86 }
+            text: Instructor
+          - roll: { min: 87, max: 88 }
+            text: Planner
+          - roll: { min: 89, max: 90 }
+            text: Cashier
+          - roll: { min: 91, max: 92 }
+            text: Attendant
+          - roll: { min: 93, max: 94 }
+            text: Designer
+          - roll: { min: 95, max: 96 }
+            text: Paramedic
+          - roll: { min: 97, max: 98 }
+            text: Performer
+          - roll: { min: 99, max: 100 }
+            text: Landscaper
+      goal:
+        name: Goal
+        type: oracle_rollable
+        oracle_type: table_text
+        canonical_name: 'Goal Table'
+        summary: Use this oracle to determine a character's goal.
+        dice: 1d30
+        _source:
+          <<: *Source
+        rows:
+          - roll: { min: 1, max: 1 }
+            text: Obtain an object
+          - roll: { min: 2, max: 2 }
+            text: Make an agreement
+          - roll: { min: 3, max: 3 }
+            text: Build a relationship
+          - roll: { min: 4, max: 4 }
+            text: Undermine relationship
+          - roll: { min: 5, max: 5 }
+            text: Seek a truth
+          - roll: { min: 6, max: 6 }
+            text: Pay a debt
+          - roll: { min: 7, max: 7 }
+            text: Refute a falsehood
+          - roll: { min: 8, max: 8 }
+            text: Harm a rival
+          - roll: { min: 9, max: 9 }
+            text: Cure an ill
+          - roll: { min: 10, max: 10 }
+            text: Find a person
+          - roll: { min: 11, max: 11 }
+            text: Find a home
+          - roll: { min: 12, max: 12 }
+            text: Seize power
+          - roll: { min: 13, max: 13 }
+            text: Restore a relationship
+          - roll: { min: 14, max: 14 }
+            text: Create an item
+          - roll: { min: 15, max: 15 }
+            text: Travel to a place
+          - roll: { min: 16, max: 16 }
+            text: Escape from something
+          - roll: { min: 17, max: 17 }
+            text: Rebel against power
+          - roll: { min: 18, max: 18 }
+            text: Collect a debt
+          - roll: { min: 19, max: 19 }
+            text: Protect a secret
+          - roll: { min: 20, max: 20 }
+            text: Spread faith
+          - roll: { min: 21, max: 21 }
+            text: Enrich themselves
+          - roll: { min: 22, max: 22 }
+            text: Protect a person
+          - roll: { min: 23, max: 23 }
+            text: Protect status quo
+          - roll: { min: 24, max: 24 }
+            text: Advance status
+          - roll: { min: 25, max: 25 }
+            text: Defend a place
+          - roll: { min: 26, max: 26 }
+            text: Avenge a wrong
+          - roll: { min: 27, max: 27 }
+            text: Fulfill a duty
+          - roll: { min: 28, max: 28 }
+            text: Gain knowledge
+          - roll: { min: 29, max: 29 }
+            text: Prove worthiness
+          - roll: { min: 30, max: 30 }
+            text: Roll Twice
+
+      disposition:
+        name: Initial Disposition
+        type: oracle_rollable
+        oracle_type: table_text
+        canonical_name: 'Initial Disposition Table'
+        summary: Use this oracle to determine a character's initial attitude or disposition.
+        dice: 1d10
+        _source:
+          <<: *Source
+        rows:
+          - roll: { min: 1, max: 1 }
+            text: Indifferent
+          - roll: { min: 2, max: 2 }
+            text: Demanding
+          - roll: { min: 3, max: 3 }
+            text: Friendly
+          - roll: { min: 4, max: 4 }
+            text: Suspicious
+          - roll: { min: 5, max: 5 }
+            text: Unfriendly
+          - roll: { min: 6, max: 6 }
+            text: Cooperative
+          - roll: { min: 7, max: 7 }
+            text: Wanting
+          - roll: { min: 8, max: 8 }
+            text: Threatening
+          - roll: { min: 9, max: 9 }
+            text: Curious
+          - roll: { min: 10, max: 10 }
+            text: Hostile
