@@ -71,26 +71,16 @@ rules:
   stats:
     force:
       label: force
-      max: 7
-      min: 0
       description: Physical strength, endurance, and aggressiveness.
     dexterity:
       label: dexterity
-      max: 7
-      min: 0
       description: Quickness, agility and coordination.
     glamour:
-      label: glamour     
-      max: 7
-      min: 0
+      label: glamour
       description: Charisma, influence and charm.
     intellect:
       label: intellect
-      max: 7
-      min: 0
       description: Expertise, knowledge and observation.
     heart:
       label: heart
-      max: 7
-      min: 0
       description: Empathy and willpower.

@@ -424,21 +424,26 @@ moves:
         trigger:
           text: When you attempt to drink blood from a living being...
           conditions:
-            - text: Attempt to drink blood
+            - text: If you act with brutality and physically overwhelm your struggling victim
               method: player_choice
               roll_options:
                 - using: stat
                   stat: force
-                  condition: If you act with brutality and physically overwhelm your struggling victim.
+            - text: If you act with speed or ambush an unsuspecting victim
+              method: player_choice
+              roll_options:
                 - using: stat
                   stat: dexterity
-                  condition: If you act with speed or ambush an unsuspecting victim.
+            - text: If you act with charm or seduce your victim
+              method: player_choice
+              roll_options:
                 - using: stat
                   stat: glamour
-                  condition: If you act with charm or seduce your victim.
+            - text: If you somehow manage to get your victim's consent
+              method: player_choice
+              roll_options:
                 - using: stat
                   stat: heart
-                  condition: If you somehow manage to get your victim’s consent.
         _source:
           <<: *Source
           page: 9
