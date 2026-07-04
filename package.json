@@ -1,83 +1,24 @@
 {
-	"name": "@datasworn/tools",
-	"version": "0.0.10",
-	"description": "Internal tools used to develop Datasworn packages.",
-	"type": "module",
-	"private": true,
-	"scripts": {
-		"check": "tsc --project tsconfig.json --noEmit",
-		"build:schema": "ts-node ./src/scripts/schema/buildSchema.ts",
-		"build:jtd": "ts-node ./src/scripts/json-typedef/index.ts",
-		"build:dts": "ts-node ./src/scripts/codegen/writeTypescriptTypes.ts",
-		"build:json": "ts-node ./src/scripts/datasworn/writeDatasworn.ts",
-		"build:pkg": "ts-node ./src/scripts/pkg/nodejs/buildPackages.ts && tsc --project ./src/pkg-core/tsconfig.json",
-		"build": "ts-node ./src/scripts/pkg/nodejs/updatePackageVersions.ts && npm run build:schema && npm run build:jtd && npm run build:dts && npm run build:json && npm run build:pkg",
-		"pkg:node": "ts-node ./src/scripts/pkg/nodejs/publishPackages.ts"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/rsek/datasworn.git"
-	},
-	"keywords": [
-		"ironsworn",
-		"starforged",
-		"TTRPG"
-	],
-	"author": {
-		"name": "rsek",
-		"email": "r.sekouri@gmail.com",
-		"url": "https://github.com/rsek"
-	},
-	"license": "SEE LICENSE IN LICENSE.md",
-	"bugs": {
-		"url": "https://github.com/rsek/datasworn/issues"
-	},
-	"devDependencies": {
-		"@types/fs-extra": "^11.0.4",
-		"@types/js-yaml": "^4.0.9",
-		"@types/json-pointer": "^1.0.34",
-		"@types/json-schema": "^7.0.15",
-		"@types/lodash-es": "^4.17.11",
-		"@types/node": "^20.9.0",
-		"@types/picomatch": "^2.3.3",
-		"@typescript-eslint/eslint-plugin": "^6.10.0",
-		"@typescript-eslint/parser": "^6.10.0",
-		"esbuild": "0.19.9",
-		"eslint": "^8.53.0",
-		"eslint-config-prettier": "^9.0.0",
-		"eslint-config-standard-with-typescript": "^39.1.1",
-		"eslint-plugin-import": "^2.29.0",
-		"eslint-plugin-n": "^16.3.0",
-		"eslint-plugin-no-relative-import-paths": "^1.5.3",
-		"eslint-plugin-promise": "^6.1.1",
-		"eslint-plugin-tsdoc": "^0.2.17",
-		"json-schema": "^0.4.0",
-		"npm-dts": "^1.3.12",
-		"ts-node": "^10.9.1",
-		"tsconfig-paths": "^4.2.0",
-		"type-fest": "^4.7.1",
-		"typedoc": "^0.25.4",
-		"typescript": "^5.3.2"
-	},
-	"dependencies": {
-		"@sinclair/typebox": "^0.32.15",
-		"@sinclair/typebox-codegen": "^0.9.7",
-		"@swc/core": "^1.3.96",
-		"ajv": "^8.12.0",
-		"ajv-formats": "^2.1.1",
-		"cli-table3": "^0.6.3",
-		"fast-glob": "^3.3.2",
-		"fs-extra": "^11.1.1",
-		"json-pointer": "^0.6.2",
-		"json-schema-library": "^9.1.2",
-		"json-schema-to-typescript": "^13.1.1",
-		"jtd": "^0.1.1",
-		"lodash-es": "^4.17.21",
-		"picomatch": "^3.0.1",
-		"prettier": "^3.0.3",
-		"prettier-config-standard": "^7.0.0",
-		"remark": "^15.0.1",
-		"winston": "^3.11.0",
-		"yaml": "^2.3.4"
-	}
+  "name": "@datasworn-community/datasworn-elegy",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Datasworn source and generated package artifacts for Elegy.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/datasworn-community/datasworn-elegy.git"
+  },
+  "scripts": {
+    "build": "datasworn-build --config datasworn.config.yaml",
+    "validate": "test -f dist/packages/elegy/package.json && test -f dist/packages/elegy/json/elegy.json && test -f generated-datasworn/manifest.json && test -f generated-datasworn/elegy.json"
+  },
+  "engines": {
+    "bun": ">=1.3"
+  },
+  "devDependencies": {
+    "@datasworn-community/build-tools": "0.2.8",
+    "@datasworn-community/core": "0.2.8",
+    "@datasworn-community/ironsworn-classic": "0.2.1",
+    "@datasworn-community/starforged": "0.2.1"
+  }
 }

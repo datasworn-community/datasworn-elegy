@@ -1,0 +1,440 @@
+_id: elegy
+datasworn_version: "0.1.0"
+type: ruleset
+oracles:
+  name:
+    name: Name
+    type: oracle_collection
+    oracle_type: tables
+    _source:
+      <<: &Source
+          title: 'Elegy 3.5'
+          license: https://creativecommons.org/licenses/by-nc-sa/4.0
+          url: https://miraclem.itch.io/elegy
+          date: 2024-07-31
+          authors:
+            - name: moro de oliveira
+    contents:
+      female:
+        name: Female Names
+        type: oracle_rollable
+        oracle_type: table_text
+        canonical_name: 'Female Names'
+        summary: Use this oracle to quickly generate a name for a female character.
+        dice: 1d100
+        _source:
+          <<: *Source
+          page: 133
+        rows:
+          - roll: { min: 1, max: 1 }
+            text: Aaliyah
+          - roll: { min: 2, max: 2 }
+            text: Aisha
+          - roll: { min: 3, max: 3 }
+            text: Alicia
+          - roll: { min: 4, max: 4 }
+            text: Alina
+          - roll: { min: 5, max: 5 }
+            text: Amara
+          - roll: { min: 6, max: 6 }
+            text: Amaya
+          - roll: { min: 7, max: 7 }
+            text: Amira
+          - roll: { min: 8, max: 8 }
+            text: Amina
+          - roll: { min: 9, max: 9 }
+            text: Anaya
+          - roll: { min: 10, max: 10 }
+            text: Aria
+          - roll: { min: 11, max: 11 }
+            text: Ava
+          - roll: { min: 12, max: 12 }
+            text: Autumn
+          - roll: { min: 13, max: 13 }
+            text: Bailey
+          - roll: { min: 14, max: 14 }
+            text: Bella
+          - roll: { min: 15, max: 15 }
+            text: Brooklyn
+          - roll: { min: 16, max: 16 }
+            text: Bruna
+          - roll: { min: 17, max: 17 }
+            text: Camila
+          - roll: { min: 18, max: 18 }
+            text: Carol
+          - roll: { min: 19, max: 19 }
+            text: Catalina
+          - roll: { min: 20, max: 20 }
+            text: Celeste
+          - roll: { min: 21, max: 21 }
+            text: Cecilia
+          - roll: { min: 22, max: 22 }
+            text: Chloe
+          - roll: { min: 23, max: 23 }
+            text: Cielo
+          - roll: { min: 24, max: 24 }
+            text: Clara
+          - roll: { min: 25, max: 25 }
+            text: Diana
+          - roll: { min: 26, max: 26 }
+            text: Eliza
+          - roll: { min: 27, max: 27 }
+            text: Elena
+          - roll: { min: 28, max: 28 }
+            text: Eliana
+          - roll: { min: 29, max: 29 }
+            text: Emilia
+          - roll: { min: 30, max: 30 }
+            text: Emi
+          - roll: { min: 31, max: 31 }
+            text: Emma
+          - roll: { min: 32, max: 32 }
+            text: Eva
+          - roll: { min: 33, max: 33 }
+            text: Farah
+          - roll: { min: 34, max: 34 }
+            text: Fatima
+          - roll: { min: 35, max: 35 }
+            text: Gabriella
+          - roll: { min: 36, max: 36 }
+            text: Gabrielle
+          - roll: { min: 37, max: 37 }
+            text: Gemma
+          - roll: { min: 38, max: 38 }
+            text: Giovanna
+          - roll: { min: 39, max: 39 }
+            text: Hazel
+          - roll: { min: 40, max: 40 }
+            text: Imani
+          - roll: { min: 41, max: 41 }
+            text: Ingrid
+          - roll: { min: 42, max: 42 }
+            text: Ivy
+          - roll: { min: 43, max: 43 }
+            text: Jade
+          - roll: { min: 44, max: 44 }
+            text: Jazmin
+          - roll: { min: 45, max: 45 }
+            text: Jessica
+          - roll: { min: 46, max: 46 }
+            text: Joanne
+          - roll: { min: 47, max: 47 }
+            text: Jocelyn
+          - roll: { min: 48, max: 48 }
+            text: Juliana
+          - roll: { min: 49, max: 49 }
+            text: Julia
+          - roll: { min: 50, max: 50 }
+            text: Katie
+          - roll: { min: 51, max: 51 }
+            text: Kiara
+          - roll: { min: 52, max: 52 }
+            text: Kimberly
+          - roll: { min: 53, max: 53 }
+            text: Laura
+          - roll: { min: 54, max: 54 }
+            text: Layla
+          - roll: { min: 55, max: 55 }
+            text: Leila
+          - roll: { min: 56, max: 56 }
+            text: Lila
+          - roll: { min: 57, max: 57 }
+            text: Louise
+          - roll: { min: 58, max: 58 }
+            text: Luna
+          - roll: { min: 59, max: 59 }
+            text: Lyla
+          - roll: { min: 60, max: 60 }
+            text: Madelin
+          - roll: { min: 61, max: 61 }
+            text: Malia
+          - roll: { min: 62, max: 62 }
+            text: Mariana
+          - roll: { min: 63, max: 63 }
+            text: Maya
+          - roll: { min: 64, max: 64 }
+            text: Mia
+          - roll: { min: 65, max: 65 }
+            text: Milla
+          - roll: { min: 66, max: 66 }
+            text: Mira
+          - roll: { min: 67, max: 67 }
+            text: Miranda
+          - roll: { min: 68, max: 68 }
+            text: Molly
+          - roll: { min: 69, max: 69 }
+            text: Nadia
+          - roll: { min: 70, max: 70 }
+            text: Naomi
+          - roll: { min: 71, max: 71 }
+            text: Natalie
+          - roll: { min: 72, max: 72 }
+            text: Nora
+          - roll: { min: 73, max: 73 }
+            text: Noemi
+          - roll: { min: 74, max: 74 }
+            text: Nyla
+          - roll: { min: 75, max: 75 }
+            text: Olivia
+          - roll: { min: 76, max: 76 }
+            text: Paisley
+          - roll: { min: 77, max: 77 }
+            text: Paola
+          - roll: { min: 78, max: 78 }
+            text: Penelope
+          - roll: { min: 79, max: 79 }
+            text: Priya
+          - roll: { min: 80, max: 80 }
+            text: Ruby
+          - roll: { min: 81, max: 81 }
+            text: Salma
+          - roll: { min: 82, max: 82 }
+            text: Samantha
+          - roll: { min: 83, max: 83 }
+            text: Samira
+          - roll: { min: 84, max: 84 }
+            text: Sania
+          - roll: { min: 85, max: 85 }
+            text: Sonja
+          - roll: { min: 86, max: 86 }
+            text: Savannah
+          - roll: { min: 87, max: 87 }
+            text: Selene
+          - roll: { min: 88, max: 88 }
+            text: Seraphina
+          - roll: { min: 89, max: 89 }
+            text: Sienna
+          - roll: { min: 90, max: 90 }
+            text: Sofia
+          - roll: { min: 91, max: 91 }
+            text: Sophie
+          - roll: { min: 92, max: 92 }
+            text: Stella
+          - roll: { min: 93, max: 93 }
+            text: Taiara
+          - roll: { min: 94, max: 94 }
+            text: Valentina
+          - roll: { min: 95, max: 95 }
+            text: Valerie
+          - roll: { min: 96, max: 96 }
+            text: Vivian
+          - roll: { min: 97, max: 97 }
+            text: Vivianne
+          - roll: { min: 98, max: 98 }
+            text: Yara
+          - roll: { min: 99, max: 99 }
+            text: Zara
+          - roll: { min: 100, max: 100 }
+            text: Zoe
+
+      male:
+        name: Male Names
+        type: oracle_rollable
+        oracle_type: table_text
+        canonical_name: 'Male Names'
+        summary: Use this oracle to quickly generate a name for a male character.
+        dice: 1d100
+        _source:
+          <<: *Source
+          page: 134
+        rows:
+          - roll: { min: 1, max: 1 }
+            text: Aaron
+          - roll: { min: 2, max: 2 }
+            text: Adam
+          - roll: { min: 3, max: 3 }
+            text: Adrian
+          - roll: { min: 4, max: 4 }
+            text: Alan
+          - roll: { min: 5, max: 5 }
+            text: Alejandro
+          - roll: { min: 6, max: 6 }
+            text: Alex
+          - roll: { min: 7, max: 7 }
+            text: Alexander
+          - roll: { min: 8, max: 8 }
+            text: Alexis
+          - roll: { min: 9, max: 9 }
+            text: Allen
+          - roll: { min: 10, max: 10 }
+            text: Amari
+          - roll: { min: 11, max: 11 }
+            text: Andre
+          - roll: { min: 12, max: 12 }
+            text: Andrew
+          - roll: { min: 13, max: 13 }
+            text: Angel
+          - roll: { min: 14, max: 14 }
+            text: Anthony
+          - roll: { min: 15, max: 15 }
+            text: Antonio
+          - roll: { min: 16, max: 16 }
+            text: Arjun
+          - roll: { min: 17, max: 17 }
+            text: Asher
+          - roll: { min: 18, max: 18 }
+            text: Austin
+          - roll: { min: 19, max: 19 }
+            text: Benjamin
+          - roll: { min: 20, max: 20 }
+            text: Blake
+          - roll: { min: 21, max: 21 }
+            text: Bradley
+          - roll: { min: 22, max: 22 }
+            text: Brandon
+          - roll: { min: 23, max: 23 }
+            text: Brian
+          - roll: { min: 24, max: 24 }
+            text: Caleb
+          - roll: { min: 25, max: 25 }
+            text: Cameron
+          - roll: { min: 26, max: 26 }
+            text: Carlos
+          - roll: { min: 27, max: 27 }
+            text: Chase
+          - roll: { min: 28, max: 28 }
+            text: Christian
+          - roll: { min: 29, max: 29 }
+            text: Christopher
+          - roll: { min: 30, max: 30 }
+            text: Cody
+          - roll: { min: 31, max: 31 }
+            text: Cole
+          - roll: { min: 32, max: 32 }
+            text: Colin
+          - roll: { min: 33, max: 33 }
+            text: Cooper
+          - roll: { min: 34, max: 34 }
+            text: Damian
+          - roll: { min: 35, max: 35 }
+            text: Daniel
+          - roll: { min: 36, max: 36 }
+            text: David
+          - roll: { min: 37, max: 37 }
+            text: Devin
+          - roll: { min: 38, max: 38 }
+            text: Diego
+          - roll: { min: 39, max: 39 }
+            text: Dominic
+          - roll: { min: 40, max: 40 }
+            text: Dylan
+          - roll: { min: 41, max: 41 }
+            text: Edward
+          - roll: { min: 42, max: 42 }
+            text: Elias
+          - roll: { min: 43, max: 43 }
+            text: Elijah
+          - roll: { min: 44, max: 44 }
+            text: Emmanuel
+          - roll: { min: 45, max: 45 }
+            text: Eric
+          - roll: { min: 46, max: 46 }
+            text: Ethan
+          - roll: { min: 47, max: 47 }
+            text: Evan
+          - roll: { min: 48, max: 48 }
+            text: Gabriel
+          - roll: { min: 49, max: 49 }
+            text: Garrett
+          - roll: { min: 50, max: 50 }
+            text: Gavin
+          - roll: { min: 51, max: 51 }
+            text: Harrison
+          - roll: { min: 52, max: 52 }
+            text: Hector
+          - roll: { min: 53, max: 53 }
+            text: Henry
+          - roll: { min: 54, max: 54 }
+            text: Hunter
+          - roll: { min: 55, max: 55 }
+            text: Ian
+          - roll: { min: 56, max: 56 }
+            text: Isaac
+          - roll: { min: 57, max: 57 }
+            text: Isaiah
+          - roll: { min: 58, max: 58 }
+            text: Ivan
+          - roll: { min: 59, max: 59 }
+            text: Jack
+          - roll: { min: 60, max: 60 }
+            text: Jackson
+          - roll: { min: 61, max: 61 }
+            text: Jacob
+          - roll: { min: 62, max: 62 }
+            text: Jake
+          - roll: { min: 63, max: 63 }
+            text: James
+          - roll: { min: 64, max: 64 }
+            text: Jason
+          - roll: { min: 65, max: 65 }
+            text: Jayden
+          - roll: { min: 66, max: 66 }
+            text: Jeremiah
+          - roll: { min: 67, max: 67 }
+            text: Jeremy
+          - roll: { min: 68, max: 68 }
+            text: Jesse
+          - roll: { min: 69, max: 69 }
+            text: Joel
+          - roll: { min: 70, max: 70 }
+            text: John
+          - roll: { min: 71, max: 71 }
+            text: Jonah
+          - roll: { min: 72, max: 72 }
+            text: Jonathan
+          - roll: { min: 73, max: 73 }
+            text: Jordan
+          - roll: { min: 74, max: 74 }
+            text: Joseph
+          - roll: { min: 75, max: 75 }
+            text: Joshua
+          - roll: { min: 76, max: 76 }
+            text: Julian
+          - roll: { min: 77, max: 77 }
+            text: Justin
+          - roll: { min: 78, max: 78 }
+            text: Kai
+          - roll: { min: 79, max: 79 }
+            text: Kaleb
+          - roll: { min: 80, max: 80 }
+            text: Kevin
+          - roll: { min: 81, max: 81 }
+            text: Kyle
+          - roll: { min: 82, max: 82 }
+            text: Landon
+          - roll: { min: 83, max: 83 }
+            text: Leo
+          - roll: { min: 84, max: 84 }
+            text: Levi
+          - roll: { min: 85, max: 85 }
+            text: Liam
+          - roll: { min: 86, max: 86 }
+            text: Logan
+          - roll: { min: 87, max: 87 }
+            text: Lucas
+          - roll: { min: 88, max: 88 }
+            text: Luis
+          - roll: { min: 89, max: 89 }
+            text: Luke
+          - roll: { min: 90, max: 90 }
+            text: Mason
+          - roll: { min: 91, max: 91 }
+            text: Matthew
+          - roll: { min: 92, max: 92 }
+            text: Michael
+          - roll: { min: 93, max: 93 }
+            text: Nathan
+          - roll: { min: 94, max: 94 }
+            text: Nathaniel
+          - roll: { min: 95, max: 95 }
+            text: Nicholas
+          - roll: { min: 96, max: 96 }
+            text: Noah
+          - roll: { min: 97, max: 97 }
+            text: Oliver
+          - roll: { min: 98, max: 98 }
+            text: Oscar
+          - roll: { min: 99, max: 99 }
+            text: Patrick
+          - roll: { min: 100, max: 100 }
+            text: Ryan

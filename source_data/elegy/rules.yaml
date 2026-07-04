@@ -1,0 +1,86 @@
+_id: elegy
+datasworn_version: "0.1.0"
+type: ruleset
+<<:  &Source
+  title: 'Elegy 3.5 truths'
+  license: https://creativecommons.org/licenses/by-nc-sa/4.0
+  url: https://miraclem.itch.io/elegy
+  date: 2024-07-31
+  authors:
+    - name: moro de oliveira
+rules:
+  condition_meters:
+    health:
+      label: health
+      max: 5
+      value: 5
+      description: Health represents your current physical condition and stamina.
+    spirit:
+      label: spirit
+      max: 5
+      value: 5
+      description: Spirit is your current morale and mental state.
+    blood:
+      label: blood
+      max: 5
+      value: 5
+      shared: true
+      description: Blood represents how much your hunger for blood is sated.
+  impacts:
+    misfortunes:
+      label: misfortunes
+      description: Misfortunes are temporary. They last until your character has adequate opportunity, resources, and time to recover.
+      contents:
+        wounded:
+          label: wounded
+          description: Wounded may be marked when you are at 0 health and fail to [Endure Harm](datasworn:move:starforged/suffer/endure_harm). You are severely injured.
+          prevents_recovery:
+            - health
+        shaken:
+          label: shaken
+          description: Shaken may be marked when you are at 0 spirit and fail to [Endure Stress](datasworn:move:starforged/suffer/endure_stress). You are despairing or distraught.
+          prevents_recovery:
+            - spirit
+        starving:
+          label: starving
+          description: Starving is marked when you are at 0 blood and lose blood. You are in a violent, hungry state. You lose 1 point of glamour and 1 of intellect.
+          shared: true
+    lasting_effects:
+      label: lasting effects
+      description: Lasting effects are permanent. They forever impact your character through the momentum adjustment and—more importantly—the narrative impact of being permanently harmed or traumatized. You should factor this impact into how you perform moves and how you interact with the world.
+      contents:
+        permanently_harmed:
+          label: permanently harmed
+          description: Permanently harmed may be marked when you are at 0 health and fail to [Endure Harm](datasworn:move:starforged/suffer/endure_harm). You have suffered a wound that you must reckon with, such as the loss of an eye or hand. Or you bear physical scars that are a constant reminder of a harrowing incident.
+          permanent: true
+        traumatized:
+          label: traumatized
+          description: Traumatized may be marked when you are at 0 spirit and fail to [Endure Stress](datasworn:move:starforged/suffer/endure_stress). Your experiences have left you emotionally or mentally scarred.
+          permanent: true
+        sinner:
+          label: sinner
+          description: Sinner may be marked when you are Starving, at 0 blood and spend blood. You get so frenzied, you commit something that angers your ruler. Envision what it is and what she asks of you in exchange for letting you live. When this impact is marked, you have 0 blood and you spend more blood, you lose complete touch with your human side and turn into a beast.
+          permanent: true
+  special_tracks:
+    elegies:
+      label: elegies
+      description: Sing elegies and do what you must to see them fulfilled.
+      tags:
+        starforged:
+          legacy_track_xp: true
+  stats:
+    force:
+      label: force
+      description: Physical strength, endurance, and aggressiveness.
+    dexterity:
+      label: dexterity
+      description: Quickness, agility and coordination.
+    glamour:
+      label: glamour
+      description: Charisma, influence and charm.
+    intellect:
+      label: intellect
+      description: Expertise, knowledge and observation.
+    heart:
+      label: heart
+      description: Empathy and willpower.

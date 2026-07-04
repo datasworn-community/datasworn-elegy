@@ -1,0 +1,434 @@
+_id: elegy
+datasworn_version: "0.1.0"
+type: ruleset
+oracles:
+  text:
+    name: Location Oracles
+    type: oracle_collection
+    oracle_type: tables
+    _source:
+      <<: &Source
+          title: 'Elegy 3.5'
+          license: https://creativecommons.org/licenses/by-nc-sa/4.0
+          url: https://miraclem.itch.io/elegy
+          date: 2024-07-31
+          authors:
+            - name: moro de oliveira
+    contents:
+      generic:
+        name: Generic locations
+        type: oracle_rollable
+        oracle_type: table_text
+        canonical_name: 'Generic locations Table'
+        summary: Use this oracle to determine random locations.
+        dice: 1d100
+        _source:
+          <<: *Source
+        rows:
+          - roll: { min: 1, max: 1 }
+            text: City Hall
+          - roll: { min: 2, max: 2 }
+            text: Police Station
+          - roll: { min: 3, max: 3 }
+            text: Public Library
+          - roll: { min: 4, max: 4 }
+            text: Hospital
+          - roll: { min: 5, max: 5 }
+            text: Park
+          - roll: { min: 6, max: 6 }
+            text: Coffee Shop
+          - roll: { min: 7, max: 7 }
+            text: Art Gallery
+          - roll: { min: 8, max: 8 }
+            text: Shopping Mall
+          - roll: { min: 9, max: 9 }
+            text: University Campus
+          - roll: { min: 10, max: 10 }
+            text: Cemetery
+          - roll: { min: 11, max: 11 }
+            text: Nightclub
+          - roll: { min: 12, max: 12 }
+            text: Movie Theater
+          - roll: { min: 13, max: 13 }
+            text: Restaurant
+          - roll: { min: 14, max: 14 }
+            text: High School
+          - roll: { min: 15, max: 15 }
+            text: Gym
+          - roll: { min: 16, max: 16 }
+            text: Train Station
+          - roll: { min: 17, max: 17 }
+            text: Bank
+          - roll: { min: 18, max: 18 }
+            text: Fire Station
+          - roll: { min: 19, max: 19 }
+            text: Museum
+          - roll: { min: 20, max: 20 }
+            text: Sports Stadium
+          - roll: { min: 21, max: 21 }
+            text: Tattoo Parlor
+          - roll: { min: 22, max: 22 }
+            text: Yoga Studio
+          - roll: { min: 23, max: 23 }
+            text: Bowling Alley
+          - roll: { min: 24, max: 24 }
+            text: Barbershop
+          - roll: { min: 25, max: 25 }
+            text: Pet Store
+          - roll: { min: 26, max: 26 }
+            text: Farmers Market
+          - roll: { min: 27, max: 27 }
+            text: Secluded Beach
+          - roll: { min: 28, max: 28 }
+            text: Arcade
+          - roll: { min: 29, max: 29 }
+            text: Car Wash
+          - roll: { min: 30, max: 30 }
+            text: Ice Cream Shop
+          - roll: { min: 31, max: 31 }
+            text: Bookstore
+          - roll: { min: 32, max: 32 }
+            text: Music Venue
+          - roll: { min: 33, max: 33 }
+            text: Grocery Store
+          - roll: { min: 34, max: 34 }
+            text: Park Bench
+          - roll: { min: 35, max: 35 }
+            text: Public Pool
+          - roll: { min: 36, max: 36 }
+            text: Laundromat
+          - roll: { min: 37, max: 37 }
+            text: Pharmacy
+          - roll: { min: 38, max: 38 }
+            text: Hardware Store
+          - roll: { min: 39, max: 39 }
+            text: Bike Shop
+          - roll: { min: 40, max: 40 }
+            text: Food Truck Park
+          - roll: { min: 41, max: 41 }
+            text: Public Restroom
+          - roll: { min: 42, max: 42 }
+            text: Office Building
+          - roll: { min: 43, max: 43 }
+            text: Beauty Salon
+          - roll: { min: 44, max: 44 }
+            text: Gas Station
+          - roll: { min: 45, max: 45 }
+            text: Food Court
+          - roll: { min: 46, max: 46 }
+            text: Library
+          - roll: { min: 47, max: 47 }
+            text: Skate Park
+          - roll: { min: 48, max: 48 }
+            text: Tennis Court
+          - roll: { min: 49, max: 49 }
+            text: Playground
+          - roll: { min: 50, max: 50 }
+            text: Mini Golf Course
+          - roll: { min: 51, max: 51 }
+            text: Car Dealership
+          - roll: { min: 52, max: 52 }
+            text: Bowling Alley
+          - roll: { min: 53, max: 53 }
+            text: Dog Park
+          - roll: { min: 54, max: 54 }
+            text: Golf Course
+          - roll: { min: 55, max: 55 }
+            text: Police Academy
+          - roll: { min: 56, max: 56 }
+            text: Bus Stop
+          - roll: { min: 57, max: 57 }
+            text: Comedy Club
+          - roll: { min: 58, max: 58 }
+            text: Flower Shop
+          - roll: { min: 59, max: 59 }
+            text: Antique Store
+          - roll: { min: 60, max: 60 }
+            text: Yoga Studio
+          - roll: { min: 61, max: 61 }
+            text: Movie Rental Store
+          - roll: { min: 62, max: 62 }
+            text: Music Store
+          - roll: { min: 63, max: 63 }
+            text: Garden
+          - roll: { min: 64, max: 64 }
+            text: Pawn Shop
+          - roll: { min: 65, max: 65 }
+            text: Escape Room
+          - roll: { min: 66, max: 66 }
+            text: Art Supply Store
+          - roll: { min: 67, max: 67 }
+            text: Thrift Store
+          - roll: { min: 68, max: 68 }
+            text: Dance Studio
+          - roll: { min: 69, max: 69 }
+            text: Recording Studio
+          - roll: { min: 70, max: 70 }
+            text: Boxing Gym
+          - roll: { min: 71, max: 71 }
+            text: Hardware Store
+          - roll: { min: 72, max: 72 }
+            text: Brewery
+          - roll: { min: 73, max: 73 }
+            text: Music School
+          - roll: { min: 74, max: 74 }
+            text: Theater Company
+          - roll: { min: 75, max: 75 }
+            text: Retirement Home
+          - roll: { min: 76, max: 76 }
+            text: Auto Repair Shop
+          - roll: { min: 77, max: 77 }
+            text: Paintball Arena
+          - roll: { min: 78, max: 78 }
+            text: Farmers Market
+          - roll: { min: 79, max: 79 }
+            text: Trampoline Park
+          - roll: { min: 80, max: 80 }
+            text: Karaoke Bar
+          - roll: { min: 81, max: 81 }
+            text: Board Game Cafe
+          - roll: { min: 82, max: 82 }
+            text: Comic Book Store
+          - roll: { min: 83, max: 83 }
+            text: Furniture Store
+          - roll: { min: 84, max: 84 }
+            text: Tailor Shop
+          - roll: { min: 85, max: 85 }
+            text: Yoga Studio
+          - roll: { min: 86, max: 86 }
+            text: Dance Club
+          - roll: { min: 87, max: 87 }
+            text: Gym
+          - roll: { min: 88, max: 88 }
+            text: Skate Shop
+          - roll: { min: 89, max: 89 }
+            text: Shooting Range
+          - roll: { min: 90, max: 90 }
+            text: Home Decor Store
+          - roll: { min: 91, max: 91 }
+            text: Juice Bar
+          - roll: { min: 92, max: 92 }
+            text: Pottery Studio
+          - roll: { min: 93, max: 93 }
+            text: Tea House
+          - roll: { min: 94, max: 94 }
+            text: Boxing Studio
+          - roll: { min: 95, max: 95 }
+            text: Arts Center
+          - roll: { min: 96, max: 96 }
+            text: Go-Kart Track
+          - roll: { min: 97, max: 97 }
+            text: Laser Tag Arena
+          - roll: { min: 98, max: 98 }
+            text: Retro Arcade
+          - roll: { min: 99, max: 99 }
+            text: Outdoor Concert Venue
+
+      district:
+        name: Districts
+        type: oracle_rollable
+        oracle_type: table_text
+        canonical_name: 'Districts Table'
+        summary: Use this oracle to determine districts.
+        dice: 1d6
+        _source:
+          <<: *Source
+        rows:
+          - roll: { min: 1, max: 1 }
+            text: Downtown
+          - roll: { min: 2, max: 2 }
+            text: Suburbia
+          - roll: { min: 3, max: 3 }
+            text: Waterfront
+          - roll: { min: 4, max: 4 }
+            text: Old Town
+          - roll: { min: 5, max: 5 }
+            text: Industrial  
+          - roll: { min: 6, max: 6 }
+            text: University
+
+      downtown:
+        name: Downtown locations
+        type: oracle_rollable
+        oracle_type: table_text
+        canonical_name: 'Downtown location Table'
+        summary: Use this oracle to determine location in Downtown.
+        dice: 1d10
+        _source:
+          <<: *Source
+        rows:
+          - roll: { min: 1, max: 1 }
+            text: Blue Grove Hotel
+          - roll: { min: 2, max: 2 }
+            text: Downtown Cemetery
+          - roll: { min: 3, max: 3 }
+            text: Downtown Square
+          - roll: { min: 4, max: 4 }
+            text: Gargoyle alternative bar
+          - roll: { min: 5, max: 5 }
+            text: Night Mare Coworking
+          - roll: { min: 6, max: 6 }
+            text: Red Wood Park
+          - roll: { min: 7, max: 7 }
+            text: Santa Maria Mall
+          - roll: { min: 8, max: 8 }
+            text: Santa Maria Observatory
+          - roll: { min: 9, max: 9 }
+            text: The Confessional club
+          - roll: { min: 10, max: 10 }
+            text: Unlucky Shot diner
+
+      suburbia:
+        name: Suburbia locations
+        type: oracle_rollable
+        oracle_type: table_text
+        canonical_name: 'Suburbia location Table'
+        summary: Use this oracle to determine location in Suburbia.
+        dice: 1d10
+        _source:
+          <<: *Source
+        rows:
+          - roll: { min: 1, max: 1 }
+            text: Bubble Plex Cinema
+          - roll: { min: 2, max: 2 }
+            text: Family Bites diner
+          - roll: { min: 3, max: 3 }
+            text: Machado Bookstore
+          - roll: { min: 4, max: 4 }
+            text: Mandala Hollistic Center
+          - roll: { min: 5, max: 5 }
+            text: Sub. Animal Hospital
+          - roll: { min: 6, max: 6 }
+            text: Sub. Park
+          - roll: { min: 7, max: 7 }
+            text: Sub. Police Station
+          - roll: { min: 8, max: 8 }
+            text: Sub. Sports Center
+          - roll: { min: 9, max: 9 }
+            text: Suburbia Tech tech shop
+          - roll: { min: 10, max: 10 }
+            text: Tranquil Trails retirement
+
+      waterfront:
+        name: Waterfront locations
+        type: oracle_rollable
+        oracle_type: table_text
+        canonical_name: 'Waterfront location Table'
+        summary: Use this oracle to determine location in Waterfront.
+        dice: 1d10
+        _source:
+          <<: *Source
+        rows:
+          - roll: { min: 1, max: 1 }
+            text: Georgia Beach
+          - roll: { min: 2, max: 2 }
+            text: If You Say So diner
+          - roll: { min: 3, max: 3 }
+            text: Santa Maria Pier
+          - roll: { min: 4, max: 4 }
+            text: Serene Hands Clinic
+          - roll: { min: 5, max: 5 }
+            text: The Opium night club
+          - roll: { min: 6, max: 6 }
+            text: Thomasina Beach
+          - roll: { min: 7, max: 7 }
+            text: Vortex tattoo studio
+          - roll: { min: 8, max: 8 }
+            text: Waterfront Cinema
+          - roll: { min: 9, max: 9 }
+            text: Waterfront Art Gallery
+          - roll: { min: 10, max: 10 }
+            text: Witch Mall trinket shop
+
+      old_town:
+        name: Old Town locations
+        type: oracle_rollable
+        oracle_type: table_text
+        canonical_name: 'Old Town location Table'
+        summary: Use this oracle to determine location in Old Town.
+        dice: 1d10
+        _source:
+          <<: *Source
+        rows:
+          - roll: { min: 1, max: 1 }
+            text: Cielo Library
+          - roll: { min: 2, max: 2 }
+            text: Correa Theatre
+          - roll: { min: 3, max: 3 }
+            text: Crafty Maria Alehouse
+          - roll: { min: 4, max: 4 }
+            text: Heritage Square
+          - roll: { min: 5, max: 5 }
+            text: Old Central Square
+          - roll: { min: 6, max: 6 }
+            text: Old Town Church
+          - roll: { min: 7, max: 7 }
+            text: Santa Maria Cemetery
+          - roll: { min: 8, max: 8 }
+            text: Santa Maria Hotel
+          - roll: { min: 9, max: 9 }
+            text: Santa Maria Museum
+          - roll: { min: 10, max: 10 }
+            text: Santa Maria Public Market
+
+      industrial:
+        name: Industrial locations
+        type: oracle_rollable
+        oracle_type: table_text
+        canonical_name: 'Industrial location Table'
+        summary: Use this oracle to determine location in Industrial.
+        dice: 1d10
+        _source:
+          <<: *Source
+        rows:
+          - roll: { min: 1, max: 1 }
+            text: Castilla Mall
+          - roll: { min: 2, max: 2 }
+            text: Flex Pulse gym
+          - roll: { min: 3, max: 3 }
+            text: Industrial Skate Park
+          - roll: { min: 4, max: 4 }
+            text: Iron Vault Industries ruins
+          - roll: { min: 5, max: 5 }
+            text: Rosa Clinic
+          - roll: { min: 6, max: 6 }
+            text: Santa Cheers pub
+          - roll: { min: 7, max: 7 }
+            text: Scrapyard Salvage
+          - roll: { min: 8, max: 8 }
+            text: Simple Life Diner
+          - roll: { min: 9, max: 9 }
+            text: Smart Fill gas station
+          - roll: { min: 10, max: 10 }
+            text: Sound Factory nightclub
+
+      university:
+        name: University locations
+        type: oracle_rollable
+        oracle_type: table_text
+        canonical_name: 'University location Table'
+        summary: Use this oracle to determine location at the University.
+        dice: 1d10
+        _source:
+          <<: *Source
+        rows:
+          - roll: { min: 1, max: 1 }
+            text: Brass Star convenience
+          - roll: { min: 2, max: 2 }
+            text: Green Pines pub
+          - roll: { min: 3, max: 3 }
+            text: Heartbeat dance club
+          - roll: { min: 4, max: 4 }
+            text: Joanne Charity hospital
+          - roll: { min: 5, max: 5 }
+            text: Kombina gourmet café
+          - roll: { min: 6, max: 6 }
+            text: University of Santa Maria
+          - roll: { min: 7, max: 7 }
+            text: USM Botanical Garden
+          - roll: { min: 8, max: 8 }
+            text: USM Library
+          - roll: { min: 9, max: 9 }
+            text: USM Science Museum
+          - roll: { min: 10, max: 10 }
+            text: USM Stadium

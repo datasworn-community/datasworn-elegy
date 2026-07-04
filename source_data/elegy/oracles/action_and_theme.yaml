@@ -1,0 +1,354 @@
+_id: elegy
+datasworn_version: "0.1.0"
+type: ruleset
+oracles:
+  action_and_theme:
+    name: Action and Theme Oracles
+    type: oracle_collection
+    oracle_type: tables
+    _source:
+      <<: &Source
+          title: 'Elegy 3.5'
+          license: https://creativecommons.org/licenses/by-nc-sa/4.0
+          url: https://miraclem.itch.io/elegy
+          date: 2024-07-31
+          authors:
+            - name: moro de oliveira
+    contents:
+      action:
+        name: Action
+        type: oracle_rollable
+        oracle_type: table_text
+        dice: 1d100
+        canonical_name: 'Action'
+        suggestions:
+            - oracle_rollable:classic/action_and_theme/theme
+        summary: Use this table to inspire a discovery, event, character goal, or situation. A roll on this table can be combined with a [Theme](datasworn:oracle_rollable:classic/action_and_theme/theme) to provide an action and a subject. Then, interpret the result based on the context of the question and your current situation.
+        _source:
+          <<: *Source
+          page: 134
+        rows:
+          - roll: { min: 1, max: 2 }
+            text: Hunt
+          - roll: { min: 3, max: 4 }
+            text: Feed
+          - roll: { min: 5, max: 6 }
+            text: Stalk
+          - roll: { min: 7, max: 8 }
+            text: Conceal
+          - roll: { min: 9, max: 10 }
+            text: Deceive
+          - roll: { min: 11, max: 12 }
+            text: Ascend
+          - roll: { min: 13, max: 14 }
+            text: Defy
+          - roll: { min: 15, max: 16 }
+            text: Reveal
+          - roll: { min: 17, max: 18 }
+            text: Negotiate
+          - roll: { min: 19, max: 20 }
+            text: Empower
+          - roll: { min: 21, max: 22 }
+            text: Disguise
+          - roll: { min: 23, max: 24 }
+            text: Ensnare
+          - roll: { min: 25, max: 26 }
+            text: Devour
+          - roll: { min: 27, max: 28 }
+            text: Incite
+          - roll: { min: 29, max: 30 }
+            text: Expose
+          - roll: { min: 31, max: 32 }
+            text: Overthrow
+          - roll: { min: 33, max: 34 }
+            text: Command
+          - roll: { min: 35, max: 36 }
+            text: Persevere
+          - roll: { min: 37, max: 38 }
+            text: Interfere
+          - roll: { min: 39, max: 40 }
+            text: Frenzy
+          - roll: { min: 41, max: 42 }
+            text: Obliterate
+          - roll: { min: 43, max: 44 }
+            text: Coerce
+          - roll: { min: 45, max: 46 }
+            text: Explore
+          - roll: { min: 47, max: 48 }
+            text: Investigate
+          - roll: { min: 49, max: 50 }
+            text: Discover
+          - roll: { min: 51, max: 52 }
+            text: Engage
+          - roll: { min: 53, max: 54 }
+            text: Connect
+          - roll: { min: 55, max: 56 }
+            text: Create
+          - roll: { min: 57, max: 58 }
+            text: Convey
+          - roll: { min: 59, max: 60 }
+            text: Learn
+          - roll: { min: 61, max: 62 }
+            text: Challenge
+          - roll: { min: 63, max: 64 }
+            text: Grow
+          - roll: { min: 65, max: 66 }
+            text: Reflect
+          - roll: { min: 67, max: 68 }
+            text: Question
+          - roll: { min: 69, max: 70 }
+            text: Adapt
+          - roll: { min: 71, max: 72 }
+            text: Thrive
+          - roll: { min: 73, max: 74 }
+            text: Transform
+          - roll: { min: 75, max: 76 }
+            text: Experience
+          - roll: { min: 77, max: 78 }
+            text: Inspire
+          - roll: { min: 79, max: 80 }
+            text: Laugh
+          - roll: { min: 81, max: 82 }
+            text: Dream
+          - roll: { min: 83, max: 84 }
+            text: Believe
+          - roll: { min: 85, max: 86 }
+            text: Help
+          - roll: { min: 87, max: 88 }
+            text: Conquer
+          - roll: { min: 89, max: 90 }
+            text: Overcome
+          - roll: { min: 91, max: 92 }
+            text: Serve
+          - roll: { min: 93, max: 94 }
+            text: Protect
+          - roll: { min: 95, max: 96 }
+            text: Heal
+          - roll: { min: 97, max: 98 }
+            text: Achieve
+          - roll: { min: 99, max: 100 }
+            text: Support
+
+      descriptors:
+        name: Descriptor Table
+        type: oracle_rollable
+        oracle_type: table_text
+        canonical_name: 'Descriptor Table'
+        summary: Use this oracle to determine a random descriptive word or adjective for a scenario.
+        dice: 1d100
+        _source:
+          <<: *Source
+          page: 134
+        rows:
+          - roll: { min: 1, max: 2 }
+            text: Eerie
+          - roll: { min: 3, max: 4 }
+            text: Sinister
+          - roll: { min: 5, max: 6 }
+            text: Haunting
+          - roll: { min: 7, max: 8 }
+            text: Supernatural
+          - roll: { min: 9, max: 10 }
+            text: Mysterious
+          - roll: { min: 11, max: 12 }
+            text: Seductive
+          - roll: { min: 13, max: 14 }
+            text: Vicious
+          - roll: { min: 15, max: 16 }
+            text: Immortal
+          - roll: { min: 17, max: 18 }
+            text: Clandestine
+          - roll: { min: 19, max: 20 }
+            text: Elusive
+          - roll: { min: 21, max: 22 }
+            text: Malevolent
+          - roll: { min: 23, max: 24 }
+            text: Hypnotic
+          - roll: { min: 25, max: 26 }
+            text: Devious
+          - roll: { min: 27, max: 28 }
+            text: Treacherous
+          - roll: { min: 29, max: 30 }
+            text: Cursed
+          - roll: { min: 31, max: 32 }
+            text: Lurking
+          - roll: { min: 33, max: 34 }
+            text: Macabre
+          - roll: { min: 35, max: 36 }
+            text: Intense
+          - roll: { min: 37, max: 38 }
+            text: Ruthless
+          - roll: { min: 39, max: 40 }
+            text: Chilling
+          - roll: { min: 41, max: 42 }
+            text: Otherworldly
+          - roll: { min: 43, max: 44 }
+            text: Pernicious
+          - roll: { min: 45, max: 46 }
+            text: Intriguing
+          - roll: { min: 47, max: 48 }
+            text: Unholy
+          - roll: { min: 49, max: 50 }
+            text: Vampiric
+          - roll: { min: 51, max: 52 }
+            text: Ephemeral
+          - roll: { min: 53, max: 54 }
+            text: Obscure
+          - roll: { min: 55, max: 56 }
+            text: Nefarious
+          - roll: { min: 57, max: 58 }
+            text: Evasive
+          - roll: { min: 59, max: 60 }
+            text: Thrilling
+          - roll: { min: 61, max: 62 }
+            text: Eloquent
+          - roll: { min: 63, max: 64 }
+            text: Unearthly
+          - roll: { min: 65, max: 66 }
+            text: Grim
+          - roll: { min: 67, max: 68 }
+            text: Beautiful
+          - roll: { min: 69, max: 70 }
+            text: Serene
+          - roll: { min: 71, max: 72 }
+            text: Joyful
+          - roll: { min: 73, max: 74 }
+            text: Playful
+          - roll: { min: 75, max: 76 }
+            text: Radiant
+          - roll: { min: 77, max: 78 }
+            text: Delicate
+          - roll: { min: 79, max: 80 }
+            text: Calm
+          - roll: { min: 81, max: 82 }
+            text: Vibrant
+          - roll: { min: 83, max: 84 }
+            text: Tranquil
+          - roll: { min: 85, max: 86 }
+            text: Lively
+          - roll: { min: 87, max: 88 }
+            text: Cozy
+          - roll: { min: 89, max: 90 }
+            text: Exquisite
+          - roll: { min: 91, max: 92 }
+            text: Harmonious
+          - roll: { min: 93, max: 94 }
+            text: Refreshing
+          - roll: { min: 95, max: 96 }
+            text: Charming
+          - roll: { min: 97, max: 98 }
+            text: Captivating
+          - roll: { min: 99, max: 100 }
+            text: Inspiring
+
+      themes:
+        name: Theme Table
+        type: oracle_rollable
+        oracle_type: table_text
+        canonical_name: 'Theme Table'
+        summary: Use this oracle to determine a random theme or motif for a story or scenario.
+        dice: 1d100
+        _source:
+          <<: *Source
+          page: 134
+        rows:
+          - roll: { min: 1, max: 2 }
+            text: Secrecy
+          - roll: { min: 3, max: 4 }
+            text: Intrigue
+          - roll: { min: 5, max: 6 }
+            text: Betrayal
+          - roll: { min: 7, max: 8 }
+            text: Desperation
+          - roll: { min: 9, max: 10 }
+            text: Redemption
+          - roll: { min: 11, max: 12 }
+            text: Isolation
+          - roll: { min: 13, max: 14 }
+            text: Temptation
+          - roll: { min: 15, max: 16 }
+            text: Anarchy
+          - roll: { min: 17, max: 18 }
+            text: Deception
+          - roll: { min: 19, max: 20 }
+            text: Manipulation
+          - roll: { min: 21, max: 22 }
+            text: Eternity
+          - roll: { min: 23, max: 24 }
+            text: Mortality
+          - roll: { min: 25, max: 26 }
+            text: Obsession
+          - roll: { min: 27, max: 28 }
+            text: Suffering
+          - roll: { min: 29, max: 30 }
+            text: Damnation
+          - roll: { min: 31, max: 32 }
+            text: Salvation
+          - roll: { min: 33, max: 34 }
+            text: Torment
+          - roll: { min: 35, max: 36 }
+            text: Devotion
+          - roll: { min: 37, max: 38 }
+            text: Legacy
+          - roll: { min: 39, max: 40 }
+            text: Despair
+          - roll: { min: 41, max: 42 }
+            text: Rebellion
+          - roll: { min: 43, max: 44 }
+            text: Justice
+          - roll: { min: 45, max: 46 }
+            text: Sacrifice
+          - roll: { min: 47, max: 48 }
+            text: Immortality
+          - roll: { min: 49, max: 50 }
+            text: Awakening
+          - roll: { min: 51, max: 52 }
+            text: Transcendence
+          - roll: { min: 53, max: 54 }
+            text: Conflict
+          - roll: { min: 55, max: 56 }
+            text: Regret
+          - roll: { min: 57, max: 58 }
+            text: Ambition
+          - roll: { min: 59, max: 60 }
+            text: Fear
+          - roll: { min: 61, max: 62 }
+            text: Dominance
+          - roll: { min: 63, max: 64 }
+            text: Veil
+          - roll: { min: 65, max: 66 }
+            text: Solitude
+          - roll: { min: 67, max: 68 }
+            text: Disguise
+          - roll: { min: 69, max: 70 }
+            text: Loss
+          - roll: { min: 71, max: 72 }
+            text: Paranoia
+          - roll: { min: 73, max: 74 }
+            text: Destiny
+          - roll: { min: 75, max: 76 }
+            text: Chaos
+          - roll: { min: 77, max: 78 }
+            text: Guilt
+          - roll: { min: 79, max: 80 }
+            text: Melancholy
+          - roll: { min: 81, max: 82 }
+            text: Schism
+          - roll: { min: 83, max: 84 }
+            text: Depravity
+          - roll: { min: 85, max: 86 }
+            text: Longing
+          - roll: { min: 87, max: 88 }
+            text: Friendship
+          - roll: { min: 89, max: 90 }
+            text: Happiness
+          - roll: { min: 91, max: 92 }
+            text: Peace
+          - roll: { min: 93, max: 94 }
+            text: Freedom
+          - roll: { min: 95, max: 96 }
+            text: Trust
+          - roll: { min: 97, max: 98 }
+            text: Courage
+          - roll: { min: 99, max: 100 }
+            text: Wisdom

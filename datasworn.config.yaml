@@ -1,0 +1,25 @@
+outDir: datasworn
+publicJsonOutDir: generated-datasworn
+packageOutDir: dist/packages
+repository:
+  type: git
+  url: git+https://github.com/datasworn-community/datasworn-elegy.git
+packages:
+  - id: elegy
+    type: ruleset
+    source: source_data/elegy
+    packageName: "@datasworn-community/elegy"
+    schemaLine: "0.2"
+    version: "0.2.0"
+    description: "Datasworn JSON data for Elegy, a solo roleplaying game of vampires."
+    license: "CC-BY-NC-SA-4.0"
+    dependencies:
+      - classic
+      - starforged
+    publishDependencies:
+      - id: classic
+        packageName: "@datasworn-community/ironsworn-classic"
+        schemaLine: "0.2"
+      - id: starforged
+        packageName: "@datasworn-community/starforged"
+        schemaLine: "0.2"
