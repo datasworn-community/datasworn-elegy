@@ -70,7 +70,8 @@ latest published version on the same Datasworn schema line. Changed packages are
 published; unchanged packages are skipped.
 
 Experimental canaries are enabled by applying the `release_experimental` label
-to a pull request. Removing the label stops future publishes; closing or merging
-the PR cleans up the canary dist-tags.
+to a pull request. Removing the label stops future publishes. The per-PR
+dist-tags remain after the PR closes as convenience aliases; use the exact
+canary version from the PR comment for reproducible installs.
 
 Before publishing, read [Publishing](docs/PUBLISHING.md).
