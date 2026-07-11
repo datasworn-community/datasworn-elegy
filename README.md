@@ -60,7 +60,7 @@ datasworn.config.yaml  Build and package metadata
 generated-datasworn/   Generated raw JSON committed for GitHub users
 datasworn/             Generated built JSON, ignored by git
 dist/packages/         Generated npm package artifacts, ignored by git
-.github/workflows/    Build, stable release, and experimental release callers
+.github/workflows/    Build and release workflow callers
 ```
 
 ## How Publishing Works
@@ -70,7 +70,8 @@ latest published version on the same Datasworn schema line. Changed packages are
 published; unchanged packages are skipped.
 
 Experimental canaries are enabled by applying the `release_experimental` label
-to a pull request. Removing the label, closing the PR, or merging the PR cleans
-up the canary dist-tags.
+to a pull request. Removing the label stops future publishes. The per-PR
+dist-tags remain after the PR closes as convenience aliases; use the exact
+canary version from the PR comment for reproducible installs.
 
 Before publishing, read [Publishing](docs/PUBLISHING.md).

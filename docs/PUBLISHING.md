@@ -1,12 +1,12 @@
 # Publishing
 
-This repository includes three workflow callers:
+This repository includes two workflow callers:
 
 - `.github/workflows/build.yml`
 - `.github/workflows/release.yml`
-- `.github/workflows/experimental-release.yml`
 
-They call the shared content workflows from:
+The release caller handles both stable and experimental publishes through the
+shared content workflows from:
 
 <https://github.com/datasworn-community/.github>
 
@@ -31,13 +31,10 @@ For schema line `0.2`, content packages publish as `0.2.x`.
 
 Apply the `release_experimental` label to a pull request to publish a canary.
 
-The experimental workflow also listens for:
-
-- label removal;
-- pull request close;
-- pull request merge.
-
-Those events let the shared workflow clean up canary dist-tags.
+Removing the label stops future canary publishes. The per-PR `pr-<number>`
+dist-tags remain after the pull request closes as convenience aliases and can
+move when a new canary is published. Use the exact version from the PR comment
+for reproducible installs.
 
 ## npm Setup
 
@@ -46,14 +43,15 @@ Before the first stable publish:
 1. Make sure `packageName` in `datasworn.config.yaml` belongs to the publishing scope.
 2. Configure publishing credentials for this repository.
 
-The Datasworn Community org is moving toward npm trusted publishing with GitHub
-Actions provenance. If you use your own scope, configure npm trusted publishing
-for this repository and workflow, or provide a scoped `NPM_TOKEN` secret.
+The Datasworn Community org uses npm trusted publishing with GitHub Actions
+provenance. Configure npm trusted publishing for this repository and workflow.
+Stable and canary publishes use trusted publishing; no npm access token is
+required.
 
 For GitHub Actions trusted publishing, register the caller workflow file in npm:
 
 ```text
-.github/workflows/release.yml
+release.yml
 ```
 
 ## Before Publishing
