@@ -75,3 +75,7 @@ dist-tags remain after the PR closes as convenience aliases; use the exact
 canary version from the PR comment for reproducible installs.
 
 Before publishing, read [Publishing](docs/PUBLISHING.md).
+
+## Contributing
+
+Org-wide conventions — where to open PRs, release labels, shared CI — live in the [Datasworn Community CONTRIBUTING guide](https://github.com/datasworn-community/.github/blob/main/CONTRIBUTING.md).
